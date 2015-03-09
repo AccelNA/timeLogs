@@ -1,1 +1,2 @@
-# timeLogs - Tracking time of your projects
+# timeLogs 
+#### Tracking time of your projects
