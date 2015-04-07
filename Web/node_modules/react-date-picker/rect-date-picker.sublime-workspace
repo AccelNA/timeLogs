@@ -1,0 +1,2042 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"getITEM",
+				"getItemRegionInCanvas"
+			],
+			[
+				"DRA",
+				"DRAG_TARGET"
+			],
+			[
+				"target",
+				"targetPos"
+			],
+			[
+				"getItemR",
+				"getItemRegionInCanvas"
+			],
+			[
+				"tar",
+				"targetPos"
+			],
+			[
+				"di",
+				"diffTop"
+			],
+			[
+				"getIte",
+				"getItemRegion"
+			],
+			[
+				"DR",
+				"DRAG_TARGET"
+			],
+			[
+				"getI",
+				"getItemPosition"
+			],
+			[
+				"parent",
+				"parentId"
+			],
+			[
+				"prox",
+				"proxyPos"
+			],
+			[
+				"sele",
+				"selectedMap"
+			],
+			[
+				"selec",
+				"selectedItems"
+			],
+			[
+				"DRAG",
+				"DRAG_STAR_ITEM"
+			],
+			[
+				"State",
+				"StateManager"
+			],
+			[
+				"Item",
+				"ItemContainerMixin"
+			],
+			[
+				"compo",
+				"componentWillMount"
+			],
+			[
+				"treeNo",
+				"treeNodeProps"
+			],
+			[
+				"onMou",
+				"onMouseUp"
+			],
+			[
+				"position",
+				"positionAndSize"
+			],
+			[
+				"onRei",
+				"onResizeDragStart"
+			],
+			[
+				"onHa",
+				"onHandleDragStart"
+			],
+			[
+				"itemCom",
+				"itemComponents"
+			],
+			[
+				"onItemsD",
+				"onItemsDragStart"
+			],
+			[
+				"getItem",
+				"getItemPosition"
+			],
+			[
+				"cons",
+				"constrainRegion"
+			],
+			[
+				"getBod",
+				"getBodyStyle"
+			],
+			[
+				"posi",
+				"positionAndSize"
+			],
+			[
+				"refre",
+				"refreshSelector"
+			],
+			[
+				"const",
+				"constrain"
+			],
+			[
+				"syncPro",
+				"syncProxySize"
+			],
+			[
+				"proxyN",
+				"proxyNode"
+			],
+			[
+				"proxy",
+				"proxyNodes"
+			],
+			[
+				"renderItem",
+				"renderItemNodes"
+			],
+			[
+				"renderPro",
+				"renderProxyNodes"
+			],
+			[
+				"itemN",
+				"itemNodes"
+			],
+			[
+				"create",
+				"createWidget"
+			],
+			[
+				"getProxy",
+				"getProxyPosition"
+			],
+			[
+				"rendeRItem",
+				"renderItemNodes"
+			],
+			[
+				"getITem",
+				"getItemId"
+			],
+			[
+				"handle",
+				"handleItemDrop"
+			],
+			[
+				"onM",
+				"onMouseEnter"
+			],
+			[
+				"handleD",
+				"handleDragEnd"
+			],
+			[
+				"dra",
+				"draggerVisible"
+			],
+			[
+				"reposition",
+				"repositionDrag"
+			],
+			[
+				"property",
+				"propertyValues"
+			],
+			[
+				"propert",
+				"property"
+			],
+			[
+				"Pro",
+				"PropertiesManager"
+			],
+			[
+				"fa",
+				"factory"
+			],
+			[
+				"sing",
+				"singleSelect"
+			],
+			[
+				"selected",
+				"selectedCount"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"layer",
+				"layerRegion"
+			],
+			[
+				"de",
+				"defaultValue"
+			],
+			[
+				"satu",
+				"saturationConfig"
+			],
+			[
+				"defau",
+				"defaultValue"
+			],
+			[
+				"default",
+				"defaultColor"
+			],
+			[
+				"defa",
+				"defaultValue"
+			],
+			[
+				"handleS",
+				"handleSaturationDragStart"
+			],
+			[
+				"C",
+				"COLOR"
+			],
+			[
+				"toCo",
+				"toColorValue"
+			],
+			[
+				"va",
+				"VALIDATE"
+			],
+			[
+				"si",
+				"sizeDefined"
+			],
+			[
+				"drag",
+				"dragPos"
+			],
+			[
+				"color",
+				"colorUtils"
+			],
+			[
+				"dragS",
+				"dragStyle"
+			],
+			[
+				"cla",
+				"classes"
+			],
+			[
+				"coo",
+				"colorUtils"
+			],
+			[
+				"tiny",
+				"tinycolor"
+			],
+			[
+				"Color",
+				"ColorPicker"
+			],
+			[
+				"body",
+				"bodyClasses"
+			],
+			[
+				"proper",
+				"property"
+			],
+			[
+				"cursor",
+				"cursorGet"
+			],
+			[
+				"Proper",
+				"PropertiesManager"
+			],
+			[
+				"onDe",
+				"onDesignerPropertyChange"
+			],
+			[
+				"gridS",
+				"gridSize"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"backg",
+				"background"
+			],
+			[
+				"text",
+				"textAlign"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"onDra",
+				"onDragStart"
+			],
+			[
+				"style",
+				"styleName"
+			],
+			[
+				"onProxy",
+				"onProxyUnmount"
+			],
+			[
+				"mous",
+				"mouseOver"
+			],
+			[
+				"toS",
+				"toStyle"
+			],
+			[
+				"chi",
+				"childValue"
+			],
+			[
+				"boolea",
+				"booleanValue"
+			],
+			[
+				"ex",
+				"excludedStyleProperties"
+			],
+			[
+				"prepare",
+				"prepareClasses"
+			],
+			[
+				"repositio",
+				"repositionDrag"
+			],
+			[
+				"acti",
+				"activeHandles"
+			],
+			[
+				"act",
+				"activeHandles"
+			],
+			[
+				"onMo",
+				"onMouseDown"
+			],
+			[
+				"hand",
+				"handleMargin"
+			],
+			[
+				"trans",
+				"translate3d"
+			],
+			[
+				"clas",
+				"classes"
+			],
+			[
+				"canvas",
+				"canvasBody"
+			],
+			[
+				"widget",
+				"widgetPositions"
+			],
+			[
+				"props",
+				"propsString"
+			],
+			[
+				"handleMous",
+				"handleMouseUp"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"wid",
+				"widget"
+			],
+			[
+				"desc",
+				"descriptor"
+			],
+			[
+				"border",
+				"borderRadius"
+			],
+			[
+				"delete",
+				"deleteIds"
+			],
+			[
+				"define",
+				"defineWidget"
+			],
+			[
+				"shi",
+				"shift"
+			],
+			[
+				"arr",
+				"arrOne"
+			],
+			[
+				"strin",
+				"stringPath"
+			],
+			[
+				"from",
+				"fromJS"
+			],
+			[
+				"Undo",
+				"UndoManager"
+			],
+			[
+				"e",
+				"equal"
+			],
+			[
+				"chan",
+				"changedProps"
+			],
+			[
+				"prop",
+				"propName"
+			],
+			[
+				"pro",
+				"property"
+			],
+			[
+				"undo",
+				"undoPush"
+			],
+			[
+				"s",
+				"should"
+			],
+			[
+				"cha",
+				"changedProps"
+			],
+			[
+				"App",
+				"AppData"
+			],
+			[
+				"other",
+				"otherTarget"
+			],
+			[
+				"total",
+				"totalFlexes"
+			],
+			[
+				"coll",
+				"collapse-tool"
+			],
+			[
+				"child",
+				"childKey"
+			],
+			[
+				"ot",
+				"otherTarget"
+			],
+			[
+				"co",
+				"collapsedMap"
+			],
+			[
+				"cl",
+				"cl	console.log"
+			],
+			[
+				"in",
+				"initialFlex"
+			],
+			[
+				"acco",
+				"accordionItemClass"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "dist/react-date-picker.min.js",
+			"settings":
+			{
+				"buffer_size": 153216,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 2074,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/index.jsx",
+			"settings":
+			{
+				"buffer_size": 6269,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.jsx",
+			"settings":
+			{
+				"buffer_size": 655,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1404,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 193,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rect-date-picker.sublime-project",
+			"settings":
+			{
+				"buffer_size": 160,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dist/react-date-picker.nomoment.min.js",
+			"settings":
+			{
+				"buffer_size": 11872,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 192.0,
+		"selected_items":
+		[
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"du",
+				"File: Duplicate"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"dup",
+				"File: Duplicate"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"linter",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"ss javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lint ",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"sublime linter li",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"mardk",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"ss javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"del",
+				"File: Delete"
+			],
+			[
+				"deke",
+				"Bower: Discover packages"
+			],
+			[
+				"ss json",
+				"Set Syntax: JSON"
+			],
+			[
+				"dee",
+				"File: Delete"
+			],
+			[
+				"markdo",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"re",
+				"File: Rename"
+			],
+			[
+				"renam",
+				"File: Rename"
+			],
+			[
+				"Rena",
+				"File: Rename"
+			],
+			[
+				"de",
+				"File: Delete"
+			],
+			[
+				"ss sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"ss text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"jsx	",
+				"Snippet: React: /** @jsx */"
+			],
+			[
+				"ss ja",
+				"Set Syntax: Jade"
+			],
+			[
+				"ss js",
+				"Set Syntax: JSON"
+			],
+			[
+				"pretty j",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"pretty ",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"pretty json",
+				"Pretty JSON: JSON 2 XML"
+			],
+			[
+				"json p",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"markdow",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"ss sa",
+				"Set Syntax: Sass"
+			],
+			[
+				"ss sty",
+				"Set Syntax: Stylus"
+			],
+			[
+				"ss java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ss live",
+				"Set Syntax: LiveScript"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/radu/code/react-date-picker/node_modules/gulp-react/node_modules/react-tools/src/core/ReactElement.js",
+		"/home/radu/code/react-date-picker/README.md",
+		"/home/radu/code/react-date-picker/node_modules/stylus-loader/node_modules/stylus/node_modules/glob/examples/usr-local.js",
+		"/home/radu/code/react-date-picker/node_modules/react/lib/getUnboundedScrollPosition.js",
+		"/home/radu/code/react-date-picker/node_modules/moment/Gruntfile.js",
+		"/home/radu/code/react-date-picker/dist/react-date-picker.nomoment.js",
+		"/home/radu/code/react-date-picker/dist/react-date-picker.js",
+		"/home/radu/code/react-date-picker/dist.config.js",
+		"/home/radu/code/react-date-picker/dist.nomoment.config.js",
+		"/home/radu/code/react-date-picker/dist.nomoment.min.config.js",
+		"/home/radu/code/react-date-picker/package.json",
+		"/home/radu/code/react-date-picker/boilerplate.json",
+		"/home/radu/code/react-date-picker/node_modules/webpack/hot/poll.js",
+		"/home/radu/code/react-date-picker/node_modules/http-server/node_modules/union/node_modules/pkginfo/examples/object-argument.js",
+		"/home/radu/code/react-date-picker/node_modules/react/lib/PooledClass.js",
+		"/home/radu/code/react-date-picker/dist.min.config.js",
+		"/home/radu/code/react-date-picker/DIST_FILE_NAME.js",
+		"/home/radu/code/react-date-picker/node_modules/jsx-loader/node_modules/react-tools/src/vendor/core/dom/isTextNode.js",
+		"/home/radu/code/react-date-picker/src/index.jsx",
+		"/home/radu/code/react-date-picker/src/utils/format.js",
+		"/home/radu/code/react-date-picker/index.jsx",
+		"/home/radu/code/react-date-picker/build-script.config.js",
+		"/home/radu/code/react-date-picker/node_modules/stylus-loader/node_modules/stylus/node_modules/sax/test/buffer-overrun.js",
+		"/home/radu/code/entity-designer/node_modules/webpack/bin/convert-argv.js",
+		"/home/radu/code/entity-designer/lib/ui/ColorField.jsx",
+		"/home/radu/code/entity-designer/src/js/widgets/create.js",
+		"/home/radu/code/entity-designer/node_modules/webpack/lib/ContextReplacementPlugin.js",
+		"/home/radu/code/entity-designer/src/js/render/getItemRegionInCanvas.js",
+		"/home/radu/code/entity-designer/src/js/render/getItemRegion.js",
+		"/home/radu/code/entity-designer/node_modules/react/lib/getEventTarget.js",
+		"/home/radu/code/entity-designer/node_modules/react/lib/getEventKey.js",
+		"/home/radu/code/entity-designer/Gulpfile.js",
+		"/home/radu/code/entity-designer/src/js/render/getRegionInCanvas.js",
+		"/home/radu/code/entity-designer/src/js/views/items/ItemProxy.jsx",
+		"/home/radu/code/entity-designer/src/js/views/selected/Selector.jsx",
+		"/home/radu/code/entity-designer/src/js/state/SelectorManager.js",
+		"/home/radu/code/entity-designer/src/js/widgets/base/WidgetMixin.js",
+		"/home/radu/code/entity-designer/src/js/render/getProxyRegionInCanvas.js",
+		"/home/radu/code/entity-designer/src/js/render/getProxyPositionFromItemNode.js",
+		"/home/radu/code/entity-designer/src/js/render/createProxy.js",
+		"/home/radu/code/entity-designer/src/resources/css/ItemProxy.styl",
+		"/home/radu/code/entity-designer/src/resources/css/Item.styl",
+		"/home/radu/code/entity-designer/node_modules/react/lib/isTextNode.js",
+		"/home/radu/code/entity-designer/index.html",
+		"/home/radu/code/entity-designer/package.json",
+		"/home/radu/code/entity-designer/src/js/render/getProxyPosition.js",
+		"/home/radu/code/entity-designer/src/js/widgets/base/getPosition.js",
+		"/home/radu/code/entity-designer/node_modules/classy/src/getParentClass.js",
+		"/home/radu/code/entity-designer/lib/ui/node_modules/browserify/test/standalone_events.js",
+		"/home/radu/code/entity-designer/src/js/utils/SizeTip.jsx",
+		"/home/radu/code/entity-designer/lib/property-grid/style.config.js",
+		"/home/radu/code/entity-designer/webpack.config.js",
+		"/home/radu/code/entity-designer/src/js/widgets/Label/index.jsx",
+		"/home/radu/code/entity-designer/src/resources/css/selector.styl",
+		"/home/radu/code/entity-designer/src/js/data/DataManager.js",
+		"/home/radu/code/entity-designer/src/js/Designer.jsx",
+		"/home/radu/code/entity-designer/lib/widget/Manager/items.js",
+		"/home/radu/code/entity-designer/src/resources/css/widgets.styl",
+		"/home/radu/code/entity-designer/lib/widget/Manager/ids.js",
+		"/home/radu/code/entity-designer/src/js/widgets/props/id.js",
+		"/home/radu/code/entity-designer/src/js/render/getConstrainRegion.js",
+		"/home/radu/code/entity-designer/src/resources/css/canvas.styl",
+		"/home/radu/code/entity-designer/lib/ui/TextFieldConfig.js",
+		"/home/radu/code/entity-designer/src/js/render/render.js",
+		"/home/radu/code/entity-designer/src/js/state/StateManager.js",
+		"/home/radu/code/entity-designer/node_modules/functionally/src/maxArgs.js",
+		"/home/radu/code/entity-designer/Makefile",
+		"/home/radu/code/entity-designer/src/js/data/ItemsManager.js",
+		"/home/radu/code/entity-designer/src/js/data/storage/read.js",
+		"/home/radu/code/entity-designer/src/js/state/manageSelection.js",
+		"/home/radu/code/entity-designer/node_modules/jquery/src/manipulation.js",
+		"/home/radu/code/entity-designer/src/js/data/AppData.js",
+		"/home/radu/code/entity-designer/node_modules/webpack/examples/hybrid-routing/aPage.js",
+		"/home/radu/code/entity-designer/node_modules/jquery/src/attributes.js",
+		"/home/radu/code/entity-designer/lib/property-grid/index.styl",
+		"/home/radu/code/entity-designer/src/js/render/getItemPosition.js",
+		"/home/radu/code/entity-designer/src/js/render/getItemId.js",
+		"/home/radu/code/entity-designer/node_modules/classy/src/getInstance.js",
+		"/home/radu/code/entity-designer/node_modules/react-tools/src/browser/syntheticEvents/__tests__/SyntheticEvent-test.js",
+		"/home/radu/code/entity-designer/src/js/views/items/Canvas.jsx",
+		"/home/radu/code/entity-designer/src/js/model/ItemFactory.js",
+		"/home/radu/code/entity-designer/src/js/render/setupDrag.js",
+		"/home/radu/code/entity-designer/README.md",
+		"/home/radu/code/entity-designer/src/js/render/syncSelectedProxies.js",
+		"/home/radu/code/entity-designer/src/js/widgets/base/define.js",
+		"/home/radu/code/entity-designer/src/js/state/AppState.js",
+		"/home/radu/code/entity-designer/src/js/render/getUnionRegion.js",
+		"/home/radu/code/entity-designer/src/js/render/createItem.js",
+		"/home/radu/code/entity-designer/src/js/views/items/AlignToolbox.jsx",
+		"/home/radu/code/entity-designer/src/js/components/ItemContainer/createItem.js",
+		"/home/radu/code/entity-designer/src/js/views/selected/Properties.jsx",
+		"/home/radu/code/entity-designer/src/js/data/SelectionManager.js",
+		"/home/radu/code/entity-designer/node_modules/region-align/alignToNormalized.js",
+		"/home/radu/code/entity-designer/node_modules/jquery/src/event/alias.js",
+		"/home/radu/code/entity-designer/lib/ui/node_modules/browserify/node_modules/events/tests/add-listeners.js",
+		"/home/radu/code/entity-designer/src/js/utils/Accordion.jsx",
+		"/home/radu/code/entity-designer/src/js/state/utils/getUnionRegion.js",
+		"/home/radu/code/entity-designer/src/js/state/utils/getItemId.js",
+		"/home/radu/code/entity-designer/src/js/components/ItemContainer/syncSelectedProxies.js",
+		"/home/radu/code/entity-designer/src/js/components/ItemContainer/getItemRegion.js",
+		"/home/radu/code/entity-designer/src/js/components/ItemContainer/createProxy.js",
+		"/home/radu/code/entity-designer/src/js/components/ItemContainer/render.js",
+		"/home/radu/code/entity-designer/node_modules/webpack-dev-server/node_modules/serve-index/node_modules/mime-types/node_modules/mime-db/README.md",
+		"/home/radu/code/entity-designer/node_modules/webpack-dev-server/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/README.md",
+		"/home/radu/code/entity-designer/node_modules/nodemon/node_modules/update-notifier/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/test/integration/test-delayed-http-upload.js",
+		"/home/radu/code/entity-designer/node_modules/webpack/lib/SingleEntryPlugin.js",
+		"/home/radu/code/entity-designer/node_modules/react-tools/src/vendor/core/emptyFunction.js",
+		"/home/radu/code/entity-designer/node_modules/should/lib/ext/type.js",
+		"/home/radu/code/entity-designer/src/js/components/ItemContainer/setupDrag.js",
+		"/home/radu/code/entity-designer/node_modules/react/lib/getUnboundedScrollPosition.js",
+		"/home/radu/code/entity-designer/node_modules/jquery/src/selector.js",
+		"/home/radu/code/entity-designer/src/js/state/updateSelected.js",
+		"/home/radu/code/entity-designer/src/js/state/selectedItems.js",
+		"/home/radu/code/entity-designer/src/js/views/items/Tree.jsx",
+		"/home/radu/code/entity-designer/src/js/views/items/renderItemContainer.jsx",
+		"/home/radu/code/entity-designer/src/js/components/ItemContainer/syncProxySize.js",
+		"/home/radu/code/entity-designer/src/js/data/storage/write.js",
+		"/home/radu/code/entity-designer/src/js/components/ItemContainer/getProxyPosition.js",
+		"/home/radu/code/entity-designer/src/js/components/ItemContainer/getUnionRegion.js",
+		"/home/radu/code/entity-designer/src/js/components/ItemContainer/mixin.js",
+		"/home/radu/code/entity-designer/src/js/widgets/Container/index.js",
+		"/home/radu/code/entity-designer/src/js/data/storage/key.js",
+		"/home/radu/code/entity-designer/node_modules/webpack/lib/Stats.js",
+		"/home/radu/code/entity-designer/node_modules/webpack/examples/multiple-entry-points-commons-chunk-css-bundle/styleA.css",
+		"/home/radu/code/entity-designer/src/js/components/ItemContainer/index.jsx",
+		"/home/radu/code/entity-designer/src/js/views/items/createProxy.js",
+		"/home/radu/code/entity-designer/src/js/views/items/createItem.js",
+		"/home/radu/code/entity-designer/src/js/components/ItemContainer/mixin.jsx"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"/home/radu/code/react-date-picker/resources,*.jsx, *.js",
+			"/home/radu/code/react-date-picker/src,*.jsx, *.js",
+			"/home/radu/code/entity-designer/src,*.jsx, *.js",
+			"/home/radu/code/entity-designer/,*.jsx, *.js",
+			"/home/radu/code/entity-designer/lib,*.jsx, *.js",
+			"/home/radu/code/entity-designer/,*.jsx, *.js",
+			"/home/radu/code/entity-designer/src,*.jsx, *.js",
+			"/home/radu/code/entity-designer/,*.jsx, *.js",
+			"/home/radu/code/entity-designer/src,*.jsx, *.js",
+			"/home/radu/code/entity-designer/lib/ui/,*.jsx, *.js",
+			"/home/radu/code/entity-designer/lib/ui/**.*",
+			"/home/radu/code/entity-designer/lib/ui/*.*",
+			"/home/radu/code/entity-designer/lib/ui",
+			"/home/radu/code/entity-designer/src",
+			"/home/radu/code/entity-designer/",
+			"/home/radu/code/entity-designer/src",
+			"/home/radu/code/entity-designer/lib",
+			"/home/radu/code/entity-designer/src/js",
+			"/home/radu/code/entity-designer/",
+			"/home/radu/code/entity-designer/lib/widget",
+			"/home/radu/code/entity-designer/lib",
+			"/home/radu/code/entity-designer/src/js",
+			"/home/radu/code/entity-designer/",
+			"/home/radu/code/entity-designer/src/js",
+			"/home/radu/code/entity-designer/",
+			"/home/radu/code/entity-designer/src/js",
+			"/home/radu/code/entity-designer/",
+			"/home/radu/code/entity-designer/src/js",
+			"/home/radu/code/entity-designer/",
+			"/home/radu/code/entity-designer/src/js",
+			"/home/radu/code/entity-designer/src",
+			"/home/radu/code/entity-designer/",
+			"/home/radu/code/entity-designer/src",
+			"/home/radu/code/entity-designer",
+			"/home/radu/code/entity-hapi/logs",
+			"/home/radu/code/entity-hapi",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"|",
+			"renderFooter",
+			"format",
+			"dp-anim-target",
+			"getConstrainRegion",
+			"MOVED_TO_DRAG_TARGET",
+			"DRAG_TARGET_POS",
+			"DRAG_TARGET",
+			"DID_CHANGE_DRAG_TARGET",
+			"proxyTargetPos",
+			"Item",
+			"getItemRegion",
+			"getProxyRegion",
+			"ITEM_ELEMENTS",
+			"getConstrainRegion",
+			"getItemPosition",
+			"DRAG_TARGET",
+			"ItemsManager",
+			"syncpr",
+			"StateManager",
+			"refreshSelector",
+			"selectormanager.update",
+			"acceptsitems",
+			";(itemNode.props.onDrag || emptyFn)(currentItem, itemNode, itemProxy, pos, proxyPos, diff, positions)",
+			"OVER_TARGETS",
+			"DRAG_TARGET_POS",
+			"OVER_NODES",
+			"console.",
+			"LEAVE_TARGET",
+			"allPositions",
+			"getItemById",
+			"getItemRegion",
+			"left",
+			"getItemRegion",
+			"getItemId",
+			"getConstrainRegion",
+			".entity-canvas .body",
+			"getItemPosition",
+			"createWidget",
+			"DRAG_TARGET",
+			"target",
+			"targetPos",
+			"MOVED_TO_DRAG_TARGET",
+			"selectionmana",
+			".dragging =",
+			"getItemPosition",
+			"MOVED_TO_DRAG_TARGET",
+			"onMount",
+			"onUnmount",
+			"unmount",
+			"left",
+			"top",
+			"dropTargetItem",
+			"DRAG_STAR_ITEM",
+			"StateManager.DRAG_OUT",
+			"onItemsDrop",
+			"onItemMouseDown",
+			"onItemsDrop",
+			".defaults",
+			"getDefaultProps",
+			".text",
+			".text =",
+			".text",
+			"copyIf",
+			"SelectorManager",
+			"syncProxySize",
+			"syncSelectedProxies",
+			"refreshSelector",
+			"SelectorManager",
+			"refreshselector",
+			"f.",
+			" getProxyPositionFromItemNode",
+			"Region.",
+			"Region",
+			"syncProxySizeBuffered",
+			"syncProxySize",
+			"createProxy",
+			"ItemsManager",
+			"syncProxySizeBuffered",
+			"syncSelectedProxies",
+			"syncSelectedProxiesSize",
+			"syncsele",
+			"ITEM_ELEMENTS",
+			"findIndex",
+			"onPropertyChange",
+			"syncSelectedProxiesSize",
+			"syncProxySize",
+			"// event && event.stopPropagation && event.stopPropagation()",
+			"console.log(event.target.value)",
+			".first",
+			"getInitialStyle",
+			"items",
+			"syncProxySize",
+			"getUnionRegion",
+			"render",
+			"SelectionManager",
+			"selectionmanager.first",
+			"SELECTED_MAP",
+			"updateSelected",
+			"updatesele",
+			"StateManager",
+			"SELECTED_MAP",
+			"updateSelected",
+			"StateManager",
+			"selected_map",
+			"updateSelected",
+			"SELECTED_MAP",
+			"selectedItems",
+			"DataSelectionManager",
+			"getselected",
+			"getfirst",
+			"getFirst",
+			"ITEM_ELEMENTS",
+			"ItemFactory",
+			"hasown",
+			"registerWithId",
+			"read",
+			"ITEM_NODES",
+			"PROXY_NODES",
+			"ITEM_NODES",
+			"PROXY_NODES",
+			"ITEM_NODES",
+			"PROXY_NODES",
+			"ITEM_NODES",
+			"StateManager",
+			"itemsmanager.move",
+			"dragging = ",
+			"onItemsDrop"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "dist/react-date-picker.min.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 153216,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								153216,
+								153216
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 188055.0,
+						"translation.y": -0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2074,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1268,
+								1268
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/index.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6269,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2365,
+								2365
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SublimeLinter-jsxhint/JavaScript (JSX).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1494.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								391,
+								391
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SublimeLinter-jsxhint/JavaScript (JSX).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								420,
+								420
+							]
+						],
+						"settings":
+						{
+							"parser": "markdown",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"target": "disk"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 193,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								193,
+								193
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "rect-date-picker.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								94,
+								94
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "dist/react-date-picker.nomoment.min.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11872,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.clipboard_manager":
+	{
+		"height": 118.0
+	},
+	"output.exec":
+	{
+		"height": 328.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.haskell_sublime_load":
+	{
+		"height": 118.0
+	},
+	"project": "rect-date-picker.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"dist",
+				"dist.nomoment.config.js"
+			],
+			[
+				"builds",
+				"build-script.config.js"
+			],
+			[
+				"boi",
+				"boilerplate.json"
+			],
+			[
+				"desi",
+				"src/js/Designer.jsx"
+			],
+			[
+				"canva",
+				"src/js/views/items/Canvas.jsx"
+			],
+			[
+				"createp",
+				"src/js/render/createProxy.js"
+			],
+			[
+				"getitemr",
+				"src/js/render/getItemRegion.js"
+			],
+			[
+				"getreg",
+				"src/js/render/getRegionInCanvas.js"
+			],
+			[
+				"createpro",
+				"src/js/render/createProxy.js"
+			],
+			[
+				"getite",
+				"src/js/render/getItemRegion.js"
+			],
+			[
+				"itemprox",
+				"src/js/views/items/ItemProxy.jsx"
+			],
+			[
+				"getproxy",
+				"src/js/render/getProxyPositionFromItemNode.js"
+			],
+			[
+				"getpro",
+				"src/js/render/getProxyPositionFromItemNode.js"
+			],
+			[
+				"getitemregionincanvas",
+				"src/js/render/getItemRegionInCanvas.js"
+			],
+			[
+				"setu",
+				"src/js/render/setupDrag.js"
+			],
+			[
+				"selectionmana",
+				"src/js/data/SelectionManager.js"
+			],
+			[
+				"datam",
+				"src/js/data/DataManager.js"
+			],
+			[
+				"itemsmana",
+				"src/js/data/ItemsManager.js"
+			],
+			[
+				"statemana",
+				"src/js/state/StateManager.js"
+			],
+			[
+				"wmi",
+				"src/js/widgets/base/WidgetMixin.js"
+			],
+			[
+				"selector.jsx",
+				"src/js/views/selected/Selector.jsx"
+			],
+			[
+				"itemsm",
+				"src/js/data/ItemsManager.js"
+			],
+			[
+				"datama",
+				"src/js/data/DataManager.js"
+			],
+			[
+				"item.st",
+				"src/resources/css/Item.styl"
+			],
+			[
+				"wid.sty",
+				"src/resources/css/widgets.styl"
+			],
+			[
+				"wm",
+				"src/js/widgets/base/WidgetMixin.js"
+			],
+			[
+				"setupdra",
+				"src/js/render/setupDrag.js"
+			],
+			[
+				"manages",
+				"src/js/state/manageSelection.js"
+			],
+			[
+				"manage",
+				"src/js/state/manageSelection.js"
+			],
+			[
+				"appsta",
+				"src/js/state/AppState.js"
+			],
+			[
+				"statem",
+				"src/js/state/StateManager.js"
+			],
+			[
+				"itemsman",
+				"src/js/data/ItemsManager.js"
+			],
+			[
+				"getitemp",
+				"src/js/render/getItemPosition.js"
+			],
+			[
+				"canvas",
+				"src/js/views/items/Canvas.jsx"
+			],
+			[
+				"statemanager",
+				"src/js/state/StateManager.js"
+			],
+			[
+				"read.js",
+				"src/js/data/storage/read.js"
+			],
+			[
+				"selectormanager",
+				"src/js/state/SelectorManager.js"
+			],
+			[
+				"designer",
+				"src/js/Designer.jsx"
+			],
+			[
+				"itemfac",
+				"src/js/model/ItemFactory.js"
+			],
+			[
+				"gppf",
+				"src/js/components/ItemContainer/getProxyPositionFromItemNode.js"
+			],
+			[
+				"aligntool",
+				"src/js/views/items/AlignToolbox.jsx"
+			],
+			[
+				"selectionm",
+				"src/js/data/SelectionManager.js"
+			],
+			[
+				"createitem",
+				"src/js/components/ItemContainer/createItem.js"
+			],
+			[
+				"setupdrag",
+				"src/js/components/ItemContainer/setupDrag.js"
+			],
+			[
+				"getunionr",
+				"src/js/components/ItemContainer/getUnionRegion.js"
+			],
+			[
+				"appstate",
+				"src/js/state/AppState.js"
+			],
+			[
+				"appda",
+				"src/js/data/AppData.js"
+			],
+			[
+				"itemsma",
+				"src/js/data/ItemsManager.js"
+			],
+			[
+				"statema",
+				"src/js/state/StateManager.js"
+			],
+			[
+				"setupd",
+				"src/js/components/ItemContainer/setupDrag.js"
+			],
+			[
+				"cratepro",
+				"src/js/views/items/createProxy.js"
+			],
+			[
+				"createi",
+				"src/js/views/items/createItem.js"
+			],
+			[
+				"itemcmixin",
+				"src/js/components/ItemContainer/mixin.jsx"
+			],
+			[
+				"cretepro",
+				"src/js/views/items/createProxy.js"
+			],
+			[
+				"itemcontami",
+				"src/js/components/ItemContainer/mixin.jsx"
+			],
+			[
+				"itempro",
+				"src/resources/css/ItemProxy.styl"
+			],
+			[
+				"renderitemcontainer",
+				"src/js/views/items/renderItemContainer.jsx"
+			],
+			[
+				"itemcontamix",
+				"src/js/components/ItemContainer/mixin.jsx"
+			],
+			[
+				"cfc",
+				"lib/ui/ColorFieldConfig.jsx"
+			],
+			[
+				"colorf",
+				"lib/ui/ColorField.jsx"
+			],
+			[
+				"itemp",
+				"src/resources/css/ItemProxy.styl"
+			],
+			[
+				"createite",
+				"src/js/views/items/createItem.js"
+			],
+			[
+				"create",
+				"src/js/widgets/create.js"
+			],
+			[
+				"renderitem",
+				"src/js/views/items/renderItemContainer.jsx"
+			],
+			[
+				"widgetmi",
+				"src/js/widgets/base/WidgetMixin.js"
+			],
+			[
+				"drag",
+				"src/js/utils/DragHelper.js"
+			],
+			[
+				"itemcontainer",
+				"src/js/components/ItemContainer/index.jsx"
+			],
+			[
+				"itemcon",
+				"src/js/components/ItemContainer/index.jsx"
+			],
+			[
+				"tree",
+				"src/js/views/items/Tree.jsx"
+			],
+			[
+				"design",
+				"src/js/Designer.jsx"
+			],
+			[
+				"toolarea",
+				"src/js/ToolArea.jsx"
+			],
+			[
+				"renderitemcon",
+				"src/js/views/items/renderItemContainer.jsx"
+			],
+			[
+				"item",
+				"src/resources/css/Item.styl"
+			],
+			[
+				"containerindex",
+				"src/js/widgets/Container/index.jsx"
+			],
+			[
+				"containerin",
+				"src/js/widgets/Container/index.jsx"
+			],
+			[
+				"tokey",
+				"lib/toKeys.js"
+			],
+			[
+				"traver",
+				"lib/widget/Manager/traverse.js"
+			],
+			[
+				"prox",
+				"src/js/views/items/ItemProxy.jsx"
+			],
+			[
+				"crate",
+				"src/js/widgets/create.js"
+			],
+			[
+				"itempr",
+				"src/js/views/items/ItemProxy.jsx"
+			],
+			[
+				"container",
+				"src/js/utils/Container.jsx"
+			],
+			[
+				"items.",
+				"src/resources/css/Item.styl"
+			],
+			[
+				"regiontip",
+				"src/js/utils/RegionTip.jsx"
+			],
+			[
+				"position",
+				"src/js/utils/PositionTip.jsx"
+			],
+			[
+				"itemc",
+				"src/js/components/ItemContainer/index.jsx"
+			],
+			[
+				"itemconta",
+				"src/js/components/ItemContainer/index.jsx"
+			],
+			[
+				"widget",
+				"src/resources/css/widget.styl"
+			],
+			[
+				"selector",
+				"src/js/views/selected/Selector.jsx"
+			],
+			[
+				"web",
+				"webpack.config.js"
+			],
+			[
+				"desig",
+				"src/js/Designer.jsx"
+			],
+			[
+				"mapper",
+				"src/js/widgets/mapper.js"
+			],
+			[
+				"crea",
+				"src/js/widgets/create.js"
+			],
+			[
+				"draghe",
+				"src/js/utils/DragHelper.js"
+			],
+			[
+				"selectionma",
+				"src/js/data/SelectionManager.js"
+			],
+			[
+				"itemcontainerin",
+				"src/js/components/ItemContainer/index.jsx"
+			],
+			[
+				"colorfie",
+				"lib/ui/ColorFieldConfig.jsx"
+			],
+			[
+				"itemproxy",
+				"src/js/views/items/ItemProxy.jsx"
+			],
+			[
+				"widgetmixin",
+				"src/js/widgets/base/WidgetMixin.js"
+			],
+			[
+				"widgets",
+				"src/resources/css/widgets.styl"
+			],
+			[
+				"widget.",
+				"src/resources/css/widget.styl"
+			],
+			[
+				"widgetm",
+				"src/js/widgets/base/WidgetMixin.js"
+			],
+			[
+				"tooli",
+				"src/resources/css/toolbox-icons.styl"
+			],
+			[
+				"toolboxite",
+				"src/js/ToolboxItem.jsx"
+			],
+			[
+				"toolbox",
+				"src/js/Toolbox.jsx"
+			],
+			[
+				"attri",
+				"node_modules/jquery/src/attributes.js"
+			],
+			[
+				"prepare",
+				"src/js/widgets/prepareProperties.js"
+			],
+			[
+				"build",
+				"build.config.js"
+			],
+			[
+				"nfc",
+				"lib/ui/NumberFieldConfig.jsx"
+			],
+			[
+				"number",
+				"lib/ui/NumberField.jsx"
+			],
+			[
+				"cbc",
+				"lib/ui/ComboBoxConfig.jsx"
+			],
+			[
+				"combob",
+				"lib/ui/ComboBox.jsx"
+			],
+			[
+				"preparep",
+				"src/js/widgets/prepareProperties.js"
+			],
+			[
+				"combobc",
+				"lib/ui/ComboBoxConfig.jsx"
+			],
+			[
+				"combo",
+				"node_modules/lib/ui/ComboBox.jsx"
+			],
+			[
+				"colorfield",
+				"lib/ui/ColorFieldConfig.jsx"
+			],
+			[
+				"numberf",
+				"lib/ui/NumberFieldConfig.jsx"
+			],
+			[
+				"renderinput",
+				"node_modules/lib/ui/node_modules/react-color-picker/node_modules/react/lib/BeforeInputEventPlugin.js"
+			],
+			[
+				"setvalue",
+				"lib/ui/common/setValue.js"
+			],
+			[
+				"widget.s",
+				"src/resources/css/widget.styl"
+			],
+			[
+				"properties.",
+				"src/resources/css/properties.styl"
+			],
+			[
+				"trave",
+				"lib/widget/Manager/traverse.js"
+			],
+			[
+				"datamanager",
+				"src/js/data/DataManager.js"
+			],
+			[
+				"propertiesmanager",
+				"src/js/data/PropertiesManager.js"
+			],
+			[
+				"selector.s",
+				"src/resources/css/selector.styl"
+			],
+			[
+				"itemfa",
+				"src/js/model/ItemFactory.js"
+			],
+			[
+				"handlec",
+				"lib/ui/common/handleInputChange.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"i-",
+				"~/code/i-s/is.sublime-project"
+			],
+			[
+				"react",
+				"~/code/react-date-picker/react-date-picker.sublime-project"
+			],
+			[
+				"reg",
+				"~/code/region/region.sublime-project"
+			],
+			[
+				"css",
+				"~/code/css-utils/css-utils.sublime-project"
+			],
+			[
+				"ca",
+				"~/code/project-radu-brehar/calorie-warn.sublime-project"
+			],
+			[
+				"func",
+				"~/code/functionally/functionally.sublime-project"
+			],
+			[
+				"Z",
+				"~/code/ZippyUI/zippyui.sublime-project"
+			],
+			[
+				"react-f",
+				"~/code/react-flex/react-flex.sublime-project"
+			],
+			[
+				"copy",
+				"~/code/copy-utils/copy-utils.sublime-project"
+			],
+			[
+				"b",
+				"~/code/blog/blog-posts.sublime-project"
+			],
+			[
+				"blog",
+				"~/code/radubrehar.github.io/blog-posts.sublime-workspace"
+			],
+			[
+				"blo",
+				"~/code/blog/blog-posts.sublime-project"
+			],
+			[
+				"f",
+				"~/code/functionally/functionally.sublime-project"
+			],
+			[
+				"z",
+				"~/code/ZippyUI/zippyui.sublime-project"
+			],
+			[
+				"zi",
+				"~/code/ZippyUI/zippyui.sublime-project"
+			],
+			[
+				"entity",
+				"~/code/entity-hapi/entity-hapi.sublime-project"
+			],
+			[
+				"",
+				"~/code/i-s/is.sublime-project"
+			],
+			[
+				"cl",
+				"~/code/classy/classy.sublime-project"
+			],
+			[
+				"a",
+				"~/code/alchemy/alchemy.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 342.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
