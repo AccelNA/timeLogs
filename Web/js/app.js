@@ -13,15 +13,16 @@ var ReactRouterBootstrap = require('react-router-bootstrap'),
 var Header = require('./components/Header');
 var Footer = require('./components/Footer');
 
-var Dashboard 	= require('./components/Dashboard/Main');
-var Project 	= require('./components/project/Main');
+var Dashboard           = require('./components/Dashboard/Main');
+var Project             = require('./components/project/Main');
 var Tasks 		= require('./components/task/Main');
 var User 		= require('./components/user/Main');
 var Client 		= require('./components/client/Main');
-var TimeSheetDayView = require('./components/timesheetdayview/Main');
+var TimeSheetDayView    = require('./components/timesheetdayview/Main');
 var Login 		= require('./components/Login/Main');
 var SignUp 		= require('./components/Signup/Main');
-var Timesheetweekview = require('./components/timesheetweekview/Main');
+var Timesheetweekview   = require('./components/timesheetweekview/Main');
+var ProjectAssign       = require('./components/projectassign/Main');  
 
 var comSwitchRole  = [];
 var comSwitchRolew = [];
@@ -48,6 +49,7 @@ var App = React.createClass({
 									<NavItemLink to="tasks">Tasks</NavItemLink>
 									<NavItemLink to="user">Users</NavItemLink>
 									<NavItemLink to="client">Client</NavItemLink>
+                                                                        <NavItemLink to="projectassign">ProjectAssign</NavItemLink>
 								</Nav>	
 							</div>	
 						</header>
@@ -111,13 +113,14 @@ var routes = (
     <Route name="Dashboard" handler={Dashboard}/>
     <Route name="Login" handler={Login}/>
     <Route name="SignUp" handler={SignUp}/>
-  	<Route name="project" handler={Project}/>
+    <Route name="project" handler={Project}/>
     <Route name="tasks" handler={Tasks}/>
     <Route name="user" handler={User}/>
     <Route name="client" handler={Client}/>
     <Route name="timesheetdayview" handler={TimeSheetDayView}/>
-	<Route name="timesheetweekview" handler={Timesheetweekview}/>
-
+    <Route name="timesheetweekview" handler={Timesheetweekview}/>
+    <Route name="projectassign" handler={ProjectAssign}/>
+    
     <DefaultRoute handler={Dashboard}/>
     </Route>
 );

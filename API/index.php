@@ -111,8 +111,7 @@ $route->add('/projectlist/',function(){
                     'Description'    =>   $dataRow[2],
                     'Is Billable'    =>   $dataRow[3],
                     'Client Name'    =>   $dataRow[7],  
-                    'Action'         =>   $dataRow[0],
-                    'projectname'    =>   $dataRow[1]
+                    'Action'         =>   $dataRow[0]
             );
           $index++;   
          }
@@ -230,8 +229,7 @@ $route->add('/clientlist/',function(){
 
              $finalData[] = array(
                     'Action'        =>   $dataRow[0],  
-                    'Client Name'   =>   $dataRow[1],
-                    'clientname'    =>   $dataRow[1] 
+                    'Client Name'   =>   $dataRow[1]
             );
            
          }
@@ -407,7 +405,7 @@ $route->add('/tasklist/',function(){
      
 
         $taskName     =   $finalArray[0]['taskName'];
-        $projectName  =   $finalArray[0]['projectId'];
+        $projectName  =   $finalArray[0]['projectName'];
         $note         =   $finalArray[0]['note'];
       
 
@@ -645,6 +643,55 @@ $route->add('/timesheetdelete/',function(){
 
  });
 
+/* ProjectList
+ * @ Return data is JSON. Return data Key should be same as given below.  
+ * @ Date 08-04-2015
+ */ 
+$route->add('/projectlistautocomplete/',function(){
+
+        dbconnect();
+        $projectsql = mysql_query("
+                                    SELECT * FROM project"
+                                  );
+        $index = 1;
+        while($dataRow = mysql_fetch_array($projectsql)){
+
+             $finalData = array(
+                   
+                    'Projectname'    =>   $dataRow[0]."-".$dataRow[1]
+            );
+          $project[]=array('project' => $finalData);   
+          $index++;   
+         }
+        $projects = array('projects'=>$project) ;  
+     echo json_encode($projects);   
+
+});
+
+/* UserList
+ * @ Return data is JSON. Return data Key should be same as given below.  
+ * @ Date 08-04-2015
+ */ 
+$route->add('/userlistautocomplete/',function(){
+
+        dbconnect();
+        $usersql = mysql_query("
+                                    SELECT * FROM user"
+                                  );
+       
+        while($dataRow = mysql_fetch_array($usersql)){
+
+             $finalData = array(
+                   
+                    'username'    =>   $dataRow[0]."-".$dataRow[1]
+            );
+          $user[]=array('user' => $finalData);   
+            
+         }
+        $users = array('users'=>$user) ;  
+        echo json_encode($users);   
+
+});
 
 
 $route->add('/name/.+', function($name) {
