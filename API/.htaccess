@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /JREAM/
+RewriteBase /timeLogs/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
