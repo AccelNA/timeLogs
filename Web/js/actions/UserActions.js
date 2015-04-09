@@ -39,6 +39,13 @@
 				actionType  : UserConstants.USER_EDIT,
 				userDetails : userDetails	
 		});
+	},
+	//User-Project Assign
+	userProjectAssign: function(userDetails){
+		    AppDispatcher.handleViewAction({
+				actionType  : UserConstants.USER_PROJECT_ASSIGN,
+				userDetails : userDetails	
+		});
 	}
 	
 };

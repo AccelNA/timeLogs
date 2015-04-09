@@ -129,8 +129,11 @@ var TimeSheetDayViewMain	=	React.createClass({
                   }); 
 
          /*Project List */
+           
+            userId = $.cookie('userId');
+
             $.ajax({
-                         url: ConfigCom.serverUrl + "projectlist",
+                         url      : ConfigCom.serverUrl + "projectlistuser/user/"+userId,
                          dataType: 'json',
                          success: function(data) {
                                   this.setState({data: data});

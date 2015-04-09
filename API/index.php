@@ -96,6 +96,10 @@ $route->add('/signin/', function() {
 $route->add('/projectlist/',function(){
 
         dbconnect();
+
+        $jsonArray =  file_get_contents("php://input");;
+        $finalArray = json_decode($jsonArray, true);
+
         $projectsql = mysql_query("
                                     SELECT * , client.client_name AS  'Client Name'
                                         FROM project
@@ -111,7 +115,8 @@ $route->add('/projectlist/',function(){
                     'Description'    =>   $dataRow[2],
                     'Is Billable'    =>   $dataRow[3],
                     'Client Name'    =>   $dataRow[7],  
-                    'Action'         =>   $dataRow[0]
+                    'Action'         =>   $dataRow[0],
+                    'projectname'   =>    $dataRow[1],
             );
           $index++;   
          }
@@ -229,7 +234,8 @@ $route->add('/clientlist/',function(){
 
              $finalData[] = array(
                     'Action'        =>   $dataRow[0],  
-                    'Client Name'   =>   $dataRow[1]
+                    'Client Name'   =>   $dataRow[1],
+                    'clientname'   =>   $dataRow[1]
             );
            
          }
@@ -652,7 +658,7 @@ $route->add('/projectlistautocomplete/',function(){
         dbconnect();
         $projectsql = mysql_query("
                                     SELECT * FROM project"
-                                  );
+                                 );
         $index = 1;
         while($dataRow = mysql_fetch_array($projectsql)){
 
@@ -693,6 +699,72 @@ $route->add('/userlistautocomplete/',function(){
 
 });
 
+/*
+ * Project User assign
+ * @Date 09-04-2015
+ * @JSON data param 
+ */
+
+$route->add('/projectUserAssign/',function(){
+
+        dbconnect();
+        $jsonArray =  file_get_contents("php://input");
+        $finalArray = json_decode($jsonArray, true);
+        print_r($finalArray);
+
+        $user     =   $finalArray['user'];
+        $project  =   $finalArray['project'];
+       
+
+        
+        $tasksql = "INSERT INTO  project_assign_user (
+                        
+                        project_id,
+                        user_id
+                            )
+                        VALUES (
+                                '$user',
+                                '$project'
+                            )";
+
+        mysql_query($tasksql);
+
+        $finalData = array(
+                              'message'        =>   'success'
+                         );
+        echo json_encode($finalData);   
+});
+
+
+
+/* ProjectList for perticular user
+ * @ Return data is JSON. Return data Key should be same as given below.  
+ * @ Date 26-03-2015
+ */ 
+$route->add('/projectlistuser/user/.+',function($user){
+
+        dbconnect();
+
+        $projectsql = mysql_query("
+                                        select * from project JOIN 
+                                        project_assign_user ON project_assign_user.project_id = project.project_id 
+                                        where project_assign_user.user_id=$user    
+                                  "
+                                  );
+        $index = 1;
+        while($dataRow = mysql_fetch_array($projectsql)){
+
+             $finalData[] = array(
+                    'SINo'           =>   $index,  
+                    'Project Name'   =>   $dataRow[1],
+                    'Action'         =>   $dataRow[0],
+                    'projectname'    =>   $dataRow[1],
+            );
+          $index++;   
+         }
+     echo json_encode($finalData);   
+
+});
 
 $route->add('/name/.+', function($name) {
 	echo jason_encode("Name $name");

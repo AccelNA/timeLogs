@@ -449,7 +449,25 @@ timeDelete  :function(timeId,callback){
          });
 
 
- }
+ },
+
+ /* Assign Project to User
+  * @Date 09-04-2015
+  */ 
+
+  employeeProjectAssign: function(userDetails,callback){
+
+              $.ajax({
+
+                url : ConfigCom.serverUrl + 'projectUserAssign',
+                dataType : "json",
+                data     : JSON.stringify(userDetails),
+                type : "POST",
+                success : callback
+
+         });
+
+  }
 
 };
 module.exports = GETDATA;

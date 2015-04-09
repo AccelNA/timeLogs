@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "watchify -o timeLogs/Web/js/bundle.js -v -d .",
-    "build": "NODE_ENV=production browserify . | uglifyjs -cm > timeLogs/Webjs/bundle.min.js"
+    "build": "NODE_ENV=production browserify . | uglifyjs -cm > timeLogs/Web/js/bundle.min.js"
   },
   "author": "Jagadeesh Puthukkudi",
   "browserify": {

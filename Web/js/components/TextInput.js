@@ -26,10 +26,10 @@ var TextInput = React.createClass({
           value={this.props.value}
           label={this.props.label}
           className={this.props.className}
-	  id={this.props.id}
-	  name={this.props.name}
+	        id={this.props.id}
+	        name={this.props.name}
           customval={this.props.customval}
-	      placeholder={this.props.placeholder}
+	        placeholder={this.props.placeholder}
           hasFeedback
           groupClassName="group-class"
           wrapperClassName="wrapper-class"

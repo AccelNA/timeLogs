@@ -69,7 +69,7 @@ userDelete:function(userDetails){
 
   },
 userEdit:function(userDetails){
-  		console.log(userDetails);	
+  			
   				 for (var i in users) {
   					 	
   					 	 updatedUser =users[i];
@@ -85,6 +85,11 @@ userEdit:function(userDetails){
 	 fetchOp.employeeEdit(userDetails); 	
 	  			
   },
+userProjectAssign:function(userDetails){
+
+		fetchOp.employeeProjectAssign(userDetails,function(data){}); 			
+
+},
 emitChange: function() {
 			    this.emit(CHANGE_EVENT);
   },
@@ -125,6 +130,11 @@ AppDispatcher.register(function(playload){
 	 	    		 UserStore.userEdit(userDetails);
 	 	    		 UserStore.emitChange();
 	 	    	break;	
+	 	    case UserConstants.USER_PROJECT_ASSIGN:
+	 	    		 userDetails = action.userDetails;	
+	 	    		 UserStore.userProjectAssign(userDetails);
+	 	    		 UserStore.emitChange();
+	 	    	break;		
 	 		default:
 	 		break;
 	 }

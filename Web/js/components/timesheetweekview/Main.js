@@ -181,7 +181,7 @@ var TimeSheetDayViewMain	=	React.createClass({
         var projectActName = this.state.project_act_name;
         var hoursValue = [];
         taskArray = taskName.split('*');
-        
+       
         var date1 = this.state.day1;
         var date2 = this.state.day2;
         var date3 = this.state.day3;
@@ -250,14 +250,16 @@ var TimeSheetDayViewMain	=	React.createClass({
 
           
             /*Project List */
+
+            userId = $.cookie('userId');
+
             $.ajax({
-                         url: ConfigCom.serverUrl + "projectlist",
-                         dataType: 'json',
-                         success: function(data) {
-                                  this.setState({data: data});
-                                  
-                         }.bind(this),
-                         error: function(xhr, status, err) {
+                         url      : ConfigCom.serverUrl + "projectlistuser/user/"+userId,
+                         dataType : 'json',
+                         success  : function(data) {
+                                    this.setState({data: data});
+                                   }.bind(this),
+                         error    : function(xhr, status, err) {
                                  console.error(this.props.url, status, err.toString());
                         }.bind(this)
                   }); 
@@ -285,14 +287,14 @@ var TimeSheetDayViewMain	=	React.createClass({
              var dayDetailsPassArg = this.state.dayDetailsPass; 
 
               //Project Name and Details fro drop down box 
-           
+              project.push(<option key={0} value={0}>Select One</option>);
               var commentNodes = this.state.data.map(function (com) {
                    prjtValue = com.projectname +"*"+ com.Action;
                    project.push(<option key={prjtValue} value={prjtValue}>{com.projectname}</option>);
                });  
  
              //Task List and Details fro drop down box 
-           
+             task.push(<option key={0}  value={0}>Select One</option>);
               var commentNodes = this.state.taskdata.map(function (com) {
                    taskValue = com.TaskName +"*"+ com.Action;
                    task.push(<option key={taskValue}  value={taskValue}>{com.TaskName}</option>);
