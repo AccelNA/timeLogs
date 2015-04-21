@@ -33,21 +33,26 @@ Timelogs is mainly focus to implement **ReactJS** and it's different **React com
 * For Employee: Inset/Delete tomesheet for a week 
 
 ##Screenshots
-* Home page
+* Home Page
 ![Home Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsLogin.png)<br/>
 
-* Login page
+* Login Page
 ![Home Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/TimeLogsLogin2.png)<br/>
 
-* Admin home page
+* Admin Home Page
 
 In this page, You can slect different navigation link. This page only for logged in as a Admin. 
 
 ![Admin Home Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsAdminHome.png)<br/>
 
-* Project page
+* Project Page
 ![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsprojectName.png)<br/>
 
+* Project Edit Page
+![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/ProjectEditPage.png)<br/>
+
+* Project Search Page
+![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timelogProjectSearch.png)<br/>
 
 ##<a name="Build"></a>How to build
 
