@@ -68,6 +68,10 @@ In this page, You can slect different navigation link. This page only for logged
 ![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/Client Adding page.png)<br/>
 <hr/>
 
+* Assign an employee to project 
+![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/TImeLogsProject-Employee-Assign.png)<br/>
+<hr/>
+
 ##<a name="Build"></a>How to build
 
 [Technologies Used]: #Technology
