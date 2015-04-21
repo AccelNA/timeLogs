@@ -114,11 +114,11 @@ Keep all other as it is.
 
 Next step is to run entire application. For this purpose you can follow thse steps
 
-*Step 1*: In Windows OS start command prompt. 
+*Step 1* : In Windows OS start command prompt. 
 
-*Step 2*: Then Navigate to [folder here](https://github.com/AccelNA/timeLogs/tree/master/Web).
+*Step 2* : Then Navigate to [folder here](https://github.com/AccelNA/timeLogs/tree/master/Web).
 
-*Step 3*: Then type command 'npm start'.
+*Step 3* : Then type command 'npm start'.
 
 [Technologies Used]: #Technology
 [Features]: #Features
