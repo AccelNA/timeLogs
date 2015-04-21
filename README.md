@@ -107,18 +107,18 @@ The API folder contains entire server side scripting files. **_Index.php_** is u
 
 The WEB folder have entire frontend part of this application. You need to configure  the file [located here](https://github.com/AccelNA/timeLogs/blob/master/Web/js/config/ConfigComp.js). You can change Server URL and Client URL. In this [location](https://github.com/AccelNA/timeLogs/tree/master/Web), You can find *_package.json_* file. In this file you need to change some corresponding to your root folder.
 
-_Line Number 5: Change your root location _
-_Line Number 30: Change root location here also.
+_*Line Number 5: Change your root location*_
+_*Line Number 30: Change root location here also*_
 
 Keep all other as it is.
 
 Next step is to run entire application. For this purpose you can follow thse steps
 
-Step 1: In Windows OS start command prompt. 
+*Step 1*: In Windows OS start command prompt. 
 
-Step 2: Then Navigate to [folder here](https://github.com/AccelNA/timeLogs/tree/master/Web).
+*Step 2*: Then Navigate to [folder here](https://github.com/AccelNA/timeLogs/tree/master/Web).
 
-Step 3: Then type command 'npm start'.
+*Step 3*: Then type command 'npm start'.
 
 [Technologies Used]: #Technology
 [Features]: #Features
