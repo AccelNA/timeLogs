@@ -95,11 +95,16 @@ In this page, you can enter time for each corresponding to task.
 
 
 ##<a name="Build"></a>How to build
-To Build this application, You need to have some configurations done in your roo folder.
+To Build this application, You need to have some configurations done in your root folder.
+
+##Prerequisites
+
+* First you need to install Node.js. In this application we have used different types of Node packeages. You can find installation details from here.
+* Inserver side we are using php and databse is MySql, So you need to install WAP/LAMP server.
 
 
 [Technologies Used]: #Technology
 [Features]: #Features
 [Functionality]: #Functionality
 [How to build]: #Build
-
+[installation details from here]:https://nodejs.org/
