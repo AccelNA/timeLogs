@@ -34,7 +34,9 @@ Timelogs is mainly focus to implement ReactJS and it's different React component
 
 * For Admin : Assign Employee to task.
 
+* For Employee : Insert/Delete timesheet for a day.
 
+* For Employee : Inset/Delete tomesheet for a week 
 
 ##<a name="Build"></a>How to build
 
