@@ -17,8 +17,8 @@ TimeLogs is a timesheet tool for managing time on perticular task which comes un
 * REST API Service
 
 ##<a name="Features"></a>Features
-###Functionality
-###How to build
+##<a name="Functionality"></a>Functionality
+##<a name="Build"></a>How to build
 
 [Technologies Used]: #Technology
 [Features]: #Features
