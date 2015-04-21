@@ -99,13 +99,12 @@ To Build this application, You need to have some configurations done in your roo
 
 ##Prerequisites
 
-* First you need to install Node.js. In this application we have used different types of Node packeages. You can find installation details from here.
-* Inserver side we are using php and databse is MySql, So you need to install WAMP/LAMP server.
+* First you need to install Node.js. In this application we have used different types of Node packeages. You can find [installation details from here](https://nodejs.org).
+* Inserver side we are using php and databse is MySql, So you need to install [WAMP/LAMP server](https://github.com/AccelNA/react-parse/blob/master/js/config/ConfigComp.js).
 
 
 [Technologies Used]: #Technology
 [Features]: #Features
 [Functionality]: #Functionality
 [How to build]: #Build
-[installation details from here]:https://nodejs.org
-[WAMP/LAMP server]:https://github.com/AccelNA/react-parse/blob/master/js/config/ConfigComp.js
+
