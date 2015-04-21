@@ -10,4 +10,4 @@ In this folder, first file is index.html. This file include a javascript file wh
 Inside **JS** folder we are following flux architecture.
 ![JS Folder](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timelogJSFolder.png)<br/>
 
-The **app.js** folder is the entry point to this application. This fils contains all routing operation and multiple view render operations are held.
+The **app.js** folder is the entry point to this application. This fils contains all routing operation and multiple view render operations are held. The **components** folder treated as view part in flux architecture. Some configuration required in our application, that is included in **config** folder. All REST operations are handled by **GET.js** file, which is includedin **RESTService** folder. 
