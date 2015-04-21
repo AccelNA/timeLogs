@@ -95,17 +95,18 @@ In this page, you can enter time for each corresponding to task.
 
 
 ##<a name="Build"></a>How to build
+
+###Prerequisites
+
+* First you need to install Node.js. In this application we have used different types of Node packeages. You can find [installation details from here](https://nodejs.org).
+* Inserver side we are using php and databse is MySql, So you need to install [WAMP server](http://www.wampserver.com/en/) or [LAMP Server](https://help.ubuntu.com/community/ApacheMySQLPHP).
+
 To Build this application, You need to have some configurations done in your root folder. The entire source [code avalibale here](https://github.com/AccelNA/timeLogs). In the root folder **_timeLogs_** have two subfolder which named as **_WEB_** and **_API_**. 
 
 The API folder contains entire server side scripting files. **_Index.php_** is used to manage all server side operation. The file [location is here](https://github.com/AccelNA/timeLogs/blob/master/API/index.php). You can edit Username, Passdword and Databse name from this file for your database configuration. No other changes required in this folder. All other files can use in the API folder as [given here](https://github.com/AccelNA/timeLogs/tree/master/API). In this API folder have a file _*timesheet.sql*_, this is the schema of database. You can import in your MySql database.  
 
-The WEB folder have entire frontend part of this application. 
+The WEB folder have entire frontend part of this application. You need to configure  the file [located here](https://github.com/AccelNA/timeLogs/blob/master/Web/js/config/ConfigComp.js). You can change Server URL and Client URL. This is the only one change required in front end part.
 
-##Prerequisites
-
-* First you need to install Node.js. In this application we have used different types of Node packeages. You can find [installation details from here](https://nodejs.org).
-* Inserver side we are using php and databse is MySql, So you need to install [WAMP server](http://www.wampserver.com/en/) or [LAMP Server](https://help.ubuntu.com/community/ApacheMySQLPHP).
-* Next step is to configure the configuration file according to your root folder. File location are showing [here](https://github.com/AccelNA/timeLogs/blob/master/Web/js/config/ConfigComp.js). 
 
 [Technologies Used]: #Technology
 [Features]: #Features
