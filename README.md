@@ -21,6 +21,8 @@ TimeLogs is a tool which is used to track entire time for each task. TimeLogs is
 
 Timelogs is mainly focus to implement **ReactJS** and it's different **React components**. Entire application is build based on **FLUX** architecture. Here backend is **RESTful** service with **PHP** and **MySql**. Another important feature is authontication is based on **token**. So auth data treated as stateless.      
 
+The FLUX architecture of this application and entire workflow will find [here](https://github.com/AccelNA/timeLogs/blob/master/application_flux_architecture)
+
 ##<a name="Functionality"></a>Functionality
 
 * Login for user
@@ -99,7 +101,7 @@ In this page, you can enter time for each corresponding to task.
 ###Prerequisites
 
 * First you need to install Node.js. In this application we have used different types of Node packeages. You can find [installation details from here](https://nodejs.org).
-* Inserver side we are using php and databse is MySql, So you need to install [WAMP server](http://www.wampserver.com/en/) or [LAMP Server](https://help.ubuntu.com/community/ApacheMySQLPHP).
+* In server side, we are using php and databse is MySql, So you need to install [WAMP server](http://www.wampserver.com/en/) or [LAMP Server](https://help.ubuntu.com/community/ApacheMySQLPHP).
 
 To Build this application, You need to have some configurations done in your root folder. The entire source [code avalibale here](https://github.com/AccelNA/timeLogs). In the root folder **_timeLogs_** have two subfolder which named as **_WEB_** and **_API_**. 
 
