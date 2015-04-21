@@ -95,6 +95,8 @@ In this page, you can enter time for each corresponding to task.
 
 
 ##<a name="Build"></a>How to build
+To Build this application, You need to have some configurations done in your roo folder.
+
 
 [Technologies Used]: #Technology
 [Features]: #Features
