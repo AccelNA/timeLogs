@@ -54,6 +54,11 @@ In this page, You can slect different navigation link. This page only for logged
 * Project Search Page
 ![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timelogProjectSearch.png)<br/>
 <hr/>
+
+* Task page
+![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/TimeLogTaskpage.png)<br/>
+<hr/>
+
 ##<a name="Build"></a>How to build
 
 [Technologies Used]: #Technology
