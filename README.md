@@ -72,6 +72,14 @@ In this page, You can slect different navigation link. This page only for logged
 ![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/TImeLogsProject-Employee-Assign.png)<br/>
 <hr/>
 
+* User/Employee Page
+
+This is the Home page for User/Employee
+
+![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsEMPLOYEEPage.png)<br/>
+<hr/>
+
+
 ##<a name="Build"></a>How to build
 
 [Technologies Used]: #Technology
