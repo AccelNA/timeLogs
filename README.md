@@ -33,6 +33,10 @@ Timelogs is mainly focus to implement **ReactJS** and it's different **React com
 * For Employee: Inset/Delete tomesheet for a week 
 
 ##Screenshots
+* User Sign In Screen
+![Sign In](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsLogin.png)<br/>
+
+
 
 ##<a name="Build"></a>How to build
 
