@@ -101,7 +101,7 @@ To Build this application, You need to have some configurations done in your roo
 
 * First you need to install Node.js. In this application we have used different types of Node packeages. You can find [installation details from here](https://nodejs.org).
 * Inserver side we are using php and databse is MySql, So you need to install [WAMP server](http://www.wampserver.com/en/) or [LAMP Server](https://help.ubuntu.com/community/ApacheMySQLPHP).
-* Next set is to configure the configuration file according to your root folder. File location are showing [here](https://github.com/AccelNA/timeLogs/blob/master/Web/js/config/ConfigComp.js). 
+* Next step is to configure the configuration file according to your root folder. File location are showing [here](https://github.com/AccelNA/timeLogs/blob/master/Web/js/config/ConfigComp.js). 
 
 [Technologies Used]: #Technology
 [Features]: #Features
