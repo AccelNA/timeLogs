@@ -76,7 +76,7 @@ function checkToken($receivedToken, $receivedData)
 function dbconnect(){
 $servername = "localhost"; // change host here
 $username = "root"; // change user name
-$password = "";    // Change passwordtime
+$password = "";    // Change password
 
 // Create connection
  $conn = mysql_connect($servername, $username, $password);
