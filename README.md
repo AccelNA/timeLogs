@@ -79,6 +79,14 @@ This is the Home page for User/Employee
 ![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsEMPLOYEEPage.png)<br/>
 <hr/>
 
+* TimeSheet One Day Page
+
+In this page, you can enter time for each corresponding to task. 
+
+![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/TimeSheetEmployeeOneDay.png)<br/>
+<hr/>
+
+
 
 ##<a name="Build"></a>How to build
 
