@@ -10,6 +10,12 @@ TimeLogs is a timesheet tool for managing time on perticular task which comes un
 * [How to build][]
 
 ###Technologies Used
+
+* Frontend Library:ReactJS
+* Database: MySql
+* Server-side: PHP
+* REST API Service
+
 ###Features
 ###Functionality
 ###How to build
