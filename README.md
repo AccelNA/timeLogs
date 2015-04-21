@@ -36,6 +36,8 @@ Timelogs is mainly focus to implement **ReactJS** and it's different **React com
 * Home page
 ![Home Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsLogin.png)<br/>
 
+* Login page
+![Home Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/TimeLogsLogin2.png)<br/>
 
 
 ##<a name="Build"></a>How to build
