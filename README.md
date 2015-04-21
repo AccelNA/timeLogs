@@ -1,3 +1,2 @@
 # timeLogs 
-Building next-generation web apps with ReactJS
-##### Tracking time of your projects
+TimeLogs is a timesheet tool for managing time on perticular task which comes under projects.
