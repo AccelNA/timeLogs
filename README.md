@@ -35,25 +35,25 @@ Timelogs is mainly focus to implement **ReactJS** and it's different **React com
 ##Screenshots
 * Home Page
 ![Home Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsLogin.png)<br/>
-
+<hr/>
 * Login Page
 ![Home Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/TimeLogsLogin2.png)<br/>
-
+<hr/>
 * Admin Home Page
 
 In this page, You can slect different navigation link. This page only for logged in as a Admin. 
 
 ![Admin Home Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsAdminHome.png)<br/>
-
+<hr/>
 * Project Page
 ![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsprojectName.png)<br/>
-
+<hr/>
 * Project Edit Page
 ![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/ProjectEditPage.png)<br/>
-
+<hr/>
 * Project Search Page
 ![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timelogProjectSearch.png)<br/>
-
+<hr/>
 ##<a name="Build"></a>How to build
 
 [Technologies Used]: #Technology
