@@ -8,3 +8,11 @@ TimeLogs is a timesheet tool for managing time on perticular task which comes un
 * [Features][]
 * [Functionality][]
 * [How to build][]
+
+###Technologies Used
+
+[Technologies Used]: #Technology
+[Features]: #Features
+[Functionality]: #Functionality
+[How to build]: #Build
+
