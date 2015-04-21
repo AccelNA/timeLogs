@@ -74,13 +74,13 @@ function checkToken($receivedToken, $receivedData)
  * Mysql Connection
  */
 function dbconnect(){
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "localhost"; // change host here
+$username = "root"; // change user name
+$password = "";    // Change passwordtime
 
 // Create connection
  $conn = mysql_connect($servername, $username, $password);
- mysql_select_db('accel_timesheet', $conn) or die('Server Busy');
+ mysql_select_db('accel_timesheet', $conn) or die('Server Busy');   // Use your database name instaed of 'accel_timesheet'
 /*
  * Mysql connection end
  */
