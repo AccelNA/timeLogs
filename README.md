@@ -21,7 +21,7 @@ TimeLogs is a tool which is used to track entire time for each task. TimeLogs is
 
 Timelogs is mainly focus to implement **ReactJS** and it's different **React components**. Entire application is build based on **FLUX** architecture. Here backend is **RESTful** service with **PHP** and **MySql**. Another important feature is authontication is based on **token**. So auth data treated as stateless.      
 
-The FLUX architecture of this application and entire workflow will find [here](https://github.com/AccelNA/timeLogs/blob/master/application_flux_architecture)
+The FLUX architecture of this application and entire workflow will find [here](https://github.com/AccelNA/timeLogs/blob/master/application_flux_architecture.md)
 
 ##<a name="Functionality"></a>Functionality
 
