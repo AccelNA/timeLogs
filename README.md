@@ -22,6 +22,14 @@ TimeLogs is a tool which is used to track entire time for each task. TimeLogs is
 Timelogs is mainly focus to implement ReactJS and it's different React components. But here backend is RESTful service with PHP and MySql.    
 
 ##<a name="Functionality"></a>Functionality
+* Login for user
+** For Admin: Create,Edit,Delete and Update Client
+** For Admin: Create,Edit,Delete and Update Project
+** For Admin: Create,Edit,Delete and Update Task
+** For Admin: Create,Edit,Delete and Update User/Employee
+** For Admin : Assign Employee to task.
+
+
 ##<a name="Build"></a>How to build
 
 [Technologies Used]: #Technology
