@@ -23,16 +23,16 @@ Timelogs is mainly focus to implement ReactJS and it's different React component
 
 ##<a name="Functionality"></a>Functionality
 * Login for user
-* 
-** For Admin: Create,Edit,Delete and Update Client
+ 
+* For Admin: Create,Edit,Delete and Update Client
 
-** For Admin: Create,Edit,Delete and Update Project
+* For Admin: Create,Edit,Delete and Update Project
 
-** For Admin: Create,Edit,Delete and Update Task
+* For Admin: Create,Edit,Delete and Update Task
 
-** For Admin: Create,Edit,Delete and Update User/Employee
+* For Admin: Create,Edit,Delete and Update User/Employee
 
-** For Admin : Assign Employee to task.
+* For Admin : Assign Employee to task.
 
 
 
