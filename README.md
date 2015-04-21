@@ -95,7 +95,7 @@ In this page, you can enter time for each corresponding to task.
 
 
 ##<a name="Build"></a>How to build
-To Build this application, You need to have some configurations done in your root folder.
+To Build this application, You need to have some configurations done in your root folder. The entire source [code avalibale here](https://github.com/AccelNA/timeLogs). In the root folder _timeLogs_ have two subfolder which named as _WEB_ and _API_
 
 ##Prerequisites
 
