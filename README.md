@@ -17,7 +17,7 @@ TimeLogs is a timesheet tool for managing time on perticular task which comes un
 * REST API Service
 
 ##<a name="Features"></a>Features
-TimeLogs is a tool which is used to track entire time for each task. TimeLogs is a way to implemet timesheet in a organisation. Timesheet is a method for recording the amount of a worker's time spent on each job.  
+TimeLogs is a tool which is used to track entire time for each task. TimeLogs is a way to implemet timesheet in a organisation. Timesheet is a method for recording the amount of a worker's time spent on each job. Here two different types of user interface can used for  different user role like Admin or Employee. In employee's User Interface, there are two main pages are available. One is used to time entering for one day and other link is used to enter the time for one week. Here we can see the time table for current day. The second inteface is for admin, Whch contains all the configuration part like all Create, Edit, Delete for Client, Project, Task and User etc.    
 
 ##<a name="Functionality"></a>Functionality
 ##<a name="Build"></a>How to build
