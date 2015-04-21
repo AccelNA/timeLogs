@@ -95,7 +95,7 @@ In this page, you can enter time for each corresponding to task.
 
 
 ##<a name="Build"></a>How to build
-To Build this application, You need to have some configurations done in your root folder. The entire source [code avalibale here](https://github.com/AccelNA/timeLogs). In the root folder **_timeLogs_** have two subfolder which named as **_WEB_** and **_API_**. The API folder contains entire server side scripting files. **_Index.php_** is used to manage all server side operation. The file location [is here]((https://github.com/AccelNA/timeLogs/blob/master/API/index.php)). You can edit Username, Passdword and Databse name from this file for your database configuration.   
+To Build this application, You need to have some configurations done in your root folder. The entire source [code avalibale here](https://github.com/AccelNA/timeLogs). In the root folder **_timeLogs_** have two subfolder which named as **_WEB_** and **_API_**. The API folder contains entire server side scripting files. **_Index.php_** is used to manage all server side operation. The file [location is here]((https://github.com/AccelNA/timeLogs/blob/master/API/index.php)). You can edit Username, Passdword and Databse name from this file for your database configuration.   
 
 ##Prerequisites
 
