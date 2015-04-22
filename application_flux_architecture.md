@@ -12,4 +12,8 @@ Inside **JS** folder we are following flux architecture.
 
 The **app.js** folder is the entry point to this application. This fils contains all routing operation and multiple view render operations are held. The **components** folder treated as view part in flux architecture. Some configuration required in our application, that is included in **config** folder. All REST operations are handled by **GET.js** file, which is included in **RESTService** folder. 
 
-The view part components are in **component** folder. Reusable component keep as file inside the **component** folder and folder is treated as module of the application. 
+The user view part are in **component** folder. Reusable component keep as file inside the **component** folder and folder is treated as module of the application. 
+
+All the operation for view part is handled by **stores** folder. Each Modules have one file in stores folder.
+
+Dispatcher is the central part of flux architecture. It is handle all the operation and make relationship between action and view part. 
