@@ -1,14 +1,15 @@
 /*
  * @Date 10-03-2015
+ * Modified Date 22-04-2015
  * The File is used for USER creation 
  * Dependency /components/TextInput.js 
  * Dependency /components/Calender.js 
  */
-var React		     =   require('react');
-var DatePicker 		 =   require('react-date-picker');
-var TextInput		 =   require('../TextInput');
-var DynamicRow		 =   require('./List');
-var ReactBootstrap	 =   require('react-bootstrap');
+var React		         =   require('react');
+var DatePicker 		     =   require('react-date-picker');
+var TextInput		     =   require('../TextInput');
+var DynamicRow		     =   require('./List');
+var ReactBootstrap	     =   require('react-bootstrap');
 var TimesheetStore       =   require('../../stores/TimeSheetWeekStore');
 var TimesheetActions     =   require('../../actions/TimesheetweekActions');
 var ConfigCom            =   require('../../config/ConfigComp');
@@ -20,6 +21,7 @@ var date = new Date();
 var divStyle = {color: 'red'};   
 var mandetoryStyle = {left: '227px',width: '695px'};
 var errorCol = {'column-span': 'all'};
+var hiddenField = {'display':'none'};
 var tableDetails   = []; 
 var taskIdArray = [];
 var finalGridDetails = [];
@@ -89,7 +91,6 @@ var TimeSheetDayViewMain	=	React.createClass({
 			}
 		  )
 	  },
-
    _isDate : function(dateArg) {
            var t = (dateArg instanceof Date) ? dateArg : (new Date(dateArg));
             return !isNaN(t.valueOf());
@@ -98,37 +99,61 @@ var TimeSheetDayViewMain	=	React.createClass({
             return (new Date(minDate) <= new Date(maxDate));
     },
    _betweenDate :  function (startDt, endDt) {
-    var error = ((this._isDate(endDt)) && (this._isDate(startDt)) && this._isValidRange(startDt, endDt)) ? false : true;
-    if (error) {
 
+  //  var error = ((this._isDate(endDt)) && (this._isDate(startDt)) && this._isValidRange(startDt, endDt)) ? false : true;
+    
+   
+
+  /* if (error) {
         this.setState({error:"Error Occured!!!... Please Enter Valid Dates"});
         return;
-    }
+     }
+  else {*/
 
-    else {
-        var currentDate = new Date(startDt),
-            end = new Date(endDt);
-            var between =[];
-        while (currentDate <= end) {
-            
-            mdfyDate = new Date(currentDate);
+        console.log(startDt);
+        console.log(endDt);
+        
+         var currentDate = new Date(startDt),
+                     end = new Date(endDt); 
 
-            locale  =  "en-us",
-            month   =  mdfyDate.toLocaleString(locale, { month: "long" });
+         var numberStartDay  =  currentDate.getDay();
+         var numberEndDay    =  end.getDay(); 
 
-            fullDateYear = mdfyDate.getDate()+", "+month+" "+mdfyDate.getFullYear();
-            between.push(fullDateYear);
-           
-            currentDate.setDate(currentDate.getDate() + 1);
-          }
-       return between;
-    }
+                      
+         if(numberStartDay != 6){ // Check day is Saturday!
+                  this.setState({error:"Error Occured!!!... Please Choose Saturday As Begining Day"});
+                  return;
+              }
+         
+         else{
+                var between =[];
+                while (currentDate <= end) {
+                    
+                    mdfyDate = new Date(currentDate);
+
+                    locale  =  "en-us",
+                    month   =  mdfyDate.toLocaleString(locale, { month: "long" });
+
+                    fullDateYear = mdfyDate.getDate()+", "+month+" "+mdfyDate.getFullYear();
+                    between.push(fullDateYear);
+                   
+                    currentDate.setDate(currentDate.getDate() + 1);
+                  }
+                return between;
+       }
+   // }
      
    },
      _daySelect:function(){
          startDate  = (this.refs.firstDate.state.inputValue);
-         endDate    = (this.refs.secondDate.state.inputValue);
+
+        // endDate    = (this.refs.secondDate.state.inputValue);
+           
+         endDate = new Date(startDate); 
+         endDate.setDate(endDate.getDate()+6);
+
          dayDetails = this._betweenDate(startDate,endDate);
+
          this.setState({dayDetailsPass:dayDetails});
          this.setState({day1:dayDetails[0]});
          this.setState({day2:dayDetails[1]});
@@ -311,8 +336,12 @@ var TimeSheetDayViewMain	=	React.createClass({
                                                     <tbody>
                                              
                                                     <tr>
-                                                        <td><b>FROM</b> <Calendar    format="YYYY/MM/DD"  ref="firstDate"/></td>
-                                                        <td><b>TO</b> <Calendar    format="YYYY/MM/DD"  ref="secondDate" /></td>
+                                                        <td><b>CHOOSE SATURDAY</b> <Calendar    format="YYYY/MM/DD"  ref="firstDate"/></td>
+                                                        <td>
+                                                           <div style={hiddenField}>
+                                                               <b>CHOOSE FRIDAY</b> <Calendar    format="YYYY/MM/DD"  ref="secondDate" />
+                                                            </div>
+                                                        </td>
                                                         <td><RButton bsStyle = "primary"  bsSize="small" active caption="Click Here" submitForm={this._daySelect}/></td>
                                                     </tr> 
                                                   </tbody>    
