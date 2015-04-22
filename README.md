@@ -132,4 +132,3 @@ Next step is to run entire application. For this purpose you can follow thse ste
 [Features]: #Features
 [Functionality]: #Functionality
 [How to build]: #Build
-
