@@ -138,6 +138,7 @@ Here we consider the module **tasks**. In this module mainly ADD,EDIT,DELETE and
 ![TASK Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/TimeLogTaskpage.png)<br/>
 <hr/>
 
+After the routing operation from **app.js**, you can see the above page. In this page some HTML components and task list view is also showing. So we are first focus on HTML components and HTML forms.
 
 
 [Technologies Used]: #Technology
