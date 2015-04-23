@@ -139,6 +139,12 @@ Here we consider the module **tasks**. In this module mainly ADD,EDIT,DELETE and
 <hr/>
 
 After the routing operation from **app.js**, you can see the above page. In this page some HTML components and task list view is also showing. So we are first focus on HTML components and HTML forms.
+This is the folder [location](https://github.com/AccelNA/timeLogs/tree/master/Web/js/components/task).
+
+Inside this folder we have two files
+
+* List.js
+* Main.js
 
 
 [Technologies Used]: #Technology
