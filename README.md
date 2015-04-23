@@ -199,7 +199,7 @@ Inside the taskStore file, we can call all registered function and it makes diff
 
     AppDispatcher.register(function(playload){
     });	
-Which contains different _*payloads*_ and these payloads call corresponding functions in stores.    
+Which contains different _*payloads*_ and these payloads call corresponding functions in stores. After any database operation peforms we will call *_emitChange()_* function. This emitChange() calling this.emit() function with parameter **change**. We have node package eventEmitter and that package contains different function. One function which is named as EvenEmitter is invoked by calling this.emit() function.     
     
 
 [Technologies Used]: #Technology
