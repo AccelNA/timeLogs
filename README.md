@@ -131,6 +131,8 @@ Next step is to run entire application. For this purpose you can follow thse ste
 
 ## <a name="Application-Work-Flow">Application Work Flow</a> 
 
+In this section we are explaining work flow of this application with one module.
+
 [Technologies Used]: #Technology
 [Features]: #Features
 [Functionality]: #Functionality
