@@ -189,7 +189,7 @@ In the above code <TextInput /> is react component, Which contains different pro
         }
     });  
 
-In the above code _setState()_ function is used to set value in variable. The same procedure is using to add all other components. All these React components wrap inside <form></form> HTMl element. When we click on button the form element value will get to variable. For getting value from React components, we are using **addTask()**. In this function, we have used **this.state.elementName** for getting value of elements then called function with arguments **create**   
+In the above code _setState()_ function is used to set value in variable. The same procedure is using to add all other components. All these React components wrap inside <form></form> HTMl element. When we click on button the form element value will get to variable. For getting value from React components, we are using **addTask()**. In this function, we have used **this.state.elementName** for getting value of elements then called function with arguments **create**. This create function is defined in ACTION file. Here this function is in taskAction. The **taskAction** file location is [here](https://github.com/AccelNA/timeLogs/blob/master/Web/js/actions/TaskActions.js).      
 
 [Technologies Used]: #Technology
 [Features]: #Features
