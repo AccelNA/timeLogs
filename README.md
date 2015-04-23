@@ -8,6 +8,7 @@ TimeLogs is a timesheet tool for managing time on perticular task which comes un
 * [Features][]
 * [Functionality][]
 * [How to build][]
+* [Application Work Flow][]
 
 ##Technologies Used
 
@@ -128,7 +129,10 @@ Next step is to run entire application. For this purpose you can follow thse ste
 
 **Step 4** : Navigate to [this folder location](https://github.com/AccelNA/timeLogs/blob/master/Web/index.html). Then click and run this file in your browser.
 
+## <a name="Application-Work-Flow">Application Work Flow</a> 
+
 [Technologies Used]: #Technology
 [Features]: #Features
 [Functionality]: #Functionality
 [How to build]: #Build
+[Application Work Flow]: #Application-Work-Flow
