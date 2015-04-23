@@ -132,7 +132,7 @@ Next step is to run entire application. For this purpose you can follow thse ste
 ## <a name="Application-Work-Flow">Application Work Flow</a> 
 
 In this section we are explaining work flow of this application with one module.
-Here we consider the module **task**
+Here we consider the module **tasks**.
 
 [Technologies Used]: #Technology
 [Features]: #Features
