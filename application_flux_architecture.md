@@ -18,4 +18,4 @@ All the operation for view part is handled by **stores** folder. Each Modules ha
 
 Dispatcher is the central part of flux architecture. It is handle all the operation and make relationship between action and view part.
 
-This application is a responsive web application. For making this reponsive web application, we have used different React Bootstrap components. The CSS, JS and Fonts are keeping in **Bootstrap** folder.  
+This application is a responsive web application. For making this reponsive web application, we have used different React Bootstrap components. The CSS, JS and Fonts are keeping in **Bootstrap** folder.
