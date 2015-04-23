@@ -171,6 +171,8 @@ Here we have different HTML components like textField, Dropdown Box and textArea
         
         }
     });
+In the above code **<TextInput />** is react component.
+
 
 
 [Technologies Used]: #Technology
