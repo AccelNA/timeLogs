@@ -63,7 +63,7 @@ In this page, You can slect different navigation link. This page only for logged
 <hr/>
 
 * Task page
-![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/TimeLogTaskpage.png)<br/>
+![TASK Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/TimeLogTaskpage.png)<br/>
 <hr/>
 
 * User/Employee List Page
@@ -132,7 +132,13 @@ Next step is to run entire application. For this purpose you can follow thse ste
 ## <a name="Application-Work-Flow">Application Work Flow</a> 
 
 In this section we are explaining work flow of this application with one module.
-Here we consider the module **tasks**. In this module mainly ADD,EDIT,DELETE and LIST operations are performing.
+Here we consider the module **tasks**. In this module mainly ADD,EDIT,DELETE and LIST operations are performing. The below image showing page of **Tasks**.
+
+<hr/>
+![TASK Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/TimeLogTaskpage.png)<br/>
+<hr/>
+
+
 
 [Technologies Used]: #Technology
 [Features]: #Features
