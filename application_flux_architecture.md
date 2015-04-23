@@ -16,4 +16,6 @@ The user view part are in **component** folder. Reusable component keep as file 
 
 All the operation for view part is handled by **stores** folder. Each Modules have one file in stores folder.
 
-Dispatcher is the central part of flux architecture. It is handle all the operation and make relationship between action and view part. 
+Dispatcher is the central part of flux architecture. It is handle all the operation and make relationship between action and view part.
+
+This application is a responsive web application. For making this reponsive web application, we have used different React Bootstrap components. The CSS, JS and Fonts are keeping in **Bootstrap** folder.  
