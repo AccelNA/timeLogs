@@ -152,6 +152,7 @@ Application will first routing to **Main.js**. Inside this we include essentail 
     });
 
 In this class, we have one essential function **render** and that function is rendering all HTML component to web pages.
+
     var Tasks = React.createClass({
         render : function(){
          /// Render HTML component here
