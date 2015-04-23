@@ -155,9 +155,11 @@ In this class, we have one essential function **render** and that function is re
 
     var Tasks = React.createClass({
         render : function(){
-         /// Render HTML component here
+         // Render HTML component here
         }
     });
+    
+Here we have different HTML components like textField, Dropdown Box and textArea. Each form element treated as HTML component.      
 
 [Technologies Used]: #Technology
 [Features]: #Features
