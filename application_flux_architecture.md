@@ -20,4 +20,4 @@ Dispatcher is the central part of flux architecture. It is handle all the operat
 
 This application is a responsive web application. For making this reponsive web application, we have used different React Bootstrap components. The CSS, JS and Fonts are keeping in **Bootstrap** folder.
 
-The application contains different node modules. All node modules contain inside **node_modules**.  
+The application contains different node modules. All node modules contain inside **node_modules**.
