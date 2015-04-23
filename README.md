@@ -171,7 +171,7 @@ Here we have different HTML components like textField, Dropdown Box and textArea
         
         }
     });
-In the above code **<TextInput />** is react component.
+In the above code <TextInput /> is react component, Which contains different properties. These **props**(properties) included as atributes in normal HTML elemnts. These props is declared in **TextInput** class.  
 
 
 
