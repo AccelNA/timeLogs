@@ -193,7 +193,14 @@ In the above code _setState()_ function is used to set value in variable. The sa
 
 All these React components wrap inside <form></form> HTML element. When we click on button the form element value will get to variable. For getting value from React components, we are using **addTask()**. In this function, we have used **this.state.elementName** for getting value of elements then called function with arguments **create**. This create function is defined in ACTION file. Here this function is in taskAction. The **taskAction** file location is [here](https://github.com/AccelNA/timeLogs/blob/master/Web/js/actions/TaskActions.js). 
 
-In this file we create an object **TaskActions** and this this object contain function **create**. The central hub of FLUX architecture is _Dispatcher_ file, that file is included in taskAction file. In this **create** function we are calling handleviewAction() method for register function call and argument passing to store. So it automatically invoke corresponding store files in the application. Here **TaskStore** is the file and it's location is [here](https://github.com/AccelNA/timeLogs/blob/master/Web/js/stores/TaskStore.js).          
+In this file we create an object **TaskActions** and this this object contain function **create**. The central hub of FLUX architecture is _Dispatcher_ file, that file is included in taskAction file. In this **create** function we are calling handleviewAction() method for register function call and argument passing to store. So it automatically invoke corresponding store files in the application. Here **TaskStore** is the file and it's location is [here](https://github.com/AccelNA/timeLogs/blob/master/Web/js/stores/TaskStore.js).
+
+Inside the taskStore file, we can call all registered function and it makes different operation. For calling registered function 
+
+    AppDispatcher.register(function(playload){
+    });	
+Which contains different _*payloads*_ and these payloads call corresponding functions in stores.    
+    
 
 [Technologies Used]: #Technology
 [Features]: #Features
