@@ -159,7 +159,19 @@ In this class, we have one essential function **render** and that function is re
         }
     });
     
-Here we have different HTML components like textField, Dropdown Box and textArea. Each form element treated as HTML component.      
+Here we have different HTML components like textField, Dropdown Box and textArea. Each form element treated as React component. The text Input field treated as common component for entire application. First include that component in this page and invoke that object.
+
+    var TextInput		=	 require('../TextInput');
+    
+    var Tasks = React.createClass({
+        render : function(){
+        
+        <TextInput type="text" label="* Task Name" placeholder="Task Name" id="task_name" 
+				   name="task_name" setText={this.setTextState} task_name={this.state.task_name}  />
+        
+        }
+    });
+
 
 [Technologies Used]: #Technology
 [Features]: #Features
