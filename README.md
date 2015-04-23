@@ -146,6 +146,12 @@ Inside this folder we have two files
 * List.js
 * Main.js
 
+Application will first routing to **Main.js**. Inside this we include essentail node packages and after that creating a class named as **Tasks**. 
+
+    var Tasks = React.createClass({
+    });
+
+
 
 [Technologies Used]: #Technology
 [Features]: #Features
