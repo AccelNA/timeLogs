@@ -174,8 +174,8 @@ Here we have different HTML components like textField, Dropdown Box and textArea
 In the above code <TextInput /> is react component, Which contains different properties. These **props**(properties) included as atributes in normal HTML elemnts. These props is declared in **TextInput** class. In the above code _setText_ is function for _onChange_ . This setText function calling **setTextState**, this function set value in the input textfield as shown below.
 
     var TextInput		=	 require('../TextInput');
+    
     var Tasks = React.createClass({
-        
         setTextState:function(event){
         	switch(event.target.id){
 		 	case 'task_name':
@@ -187,7 +187,6 @@ In the above code <TextInput /> is react component, Which contains different pro
         <TextInput type="text" label="* Task Name" placeholder="Task Name" id="task_name" 
 		   name="task_name" setText={this.setTextState} task_name={this.state.task_name}  />
         }
-        
     });  
 
 
