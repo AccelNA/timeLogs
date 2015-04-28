@@ -16,3 +16,11 @@ The tokens are generating by **hash()** method and it accept two parametres. The
       {
            // Generate tokens here.
       }
+
+Then each request application check these generated token by 
+
+    function checkToken(){
+      //Token checking here 
+    }
+    
+The above checkToken() method is accepting two parameter one already generated token and recieved data. Comparing these two values and validate each request.     
