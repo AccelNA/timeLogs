@@ -10,6 +10,7 @@ TimeLogs is a timesheet tool for managing time on perticular task which comes un
 * [How to build][]
 * [Application Work Flow][]
 * [Application architecture](https://github.com/AccelNA/timeLogs/blob/master/application_flux_architecture.md)
+* [Securiry](https://github.com/AccelNA/timeLogs/blob/master/security.md)
 
 ##Technologies Used
 
