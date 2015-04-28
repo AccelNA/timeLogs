@@ -24,7 +24,7 @@ Timelogs is mainly focus to implement **ReactJS** and it's different **React com
 
 The general idea of FLUX architecture pattern can find [here](https://facebook.github.io/flux/docs/overview.html)
 
-The FLUX architecture of this application and entire workflow will find [here](https://github.com/AccelNA/timeLogs/blob/master/application_flux_architecture.md)
+The FLUX architecture of this application will find [here](https://github.com/AccelNA/timeLogs/blob/master/application_flux_architecture.md)
 
 
 ##<a name="Functionality"></a>Functionality
