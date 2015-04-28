@@ -24,3 +24,5 @@ Then each request application check these generated token by
     }
     
 The above checkToken() method is accepting two parameter one already generated token and recieved data. Comparing these two values and validate each request.     
+
+The client side essential form element validations are added.
