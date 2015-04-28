@@ -10,4 +10,9 @@ The **Admin** is the super user and **Employee** have some resctriction to acces
 
 The authentication operation are also based on token system. When user is trying to login, then as normal it will check all essential credentials and if the credential are acceptable then it will generate the token. These token are stored temporarly and check with each request.
 
-
+The tokens are generating by **hash()** method and it accept two parametres. The first parameter is **sha256** and second parameter is combinations of credentail details and server url link. These operations are done in 
+    
+    function createToken($data)
+      {
+           // Generate tokens here.
+      }
