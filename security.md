@@ -17,7 +17,7 @@ The tokens are generating by **hash()** method and it accept two parametres. The
            // Generate tokens here.
       }
 
-Then each request application check these generated token by 
+Then each request in application check these generated token by 
 
     function checkToken(receivedToken, receivedData){
       //Token checking here 
