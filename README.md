@@ -28,6 +28,8 @@ The general idea of FLUX architecture pattern can find [here](https://facebook.g
 
 The FLUX architecture of this application will find [here](https://github.com/AccelNA/timeLogs/blob/master/application_flux_architecture.md)
 
+The security details of this application can find [here](https://github.com/AccelNA/timeLogs/blob/master/security.md)
+
 
 ##<a name="Functionality"></a>Functionality
 
