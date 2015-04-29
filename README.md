@@ -212,7 +212,7 @@ We will explaine another module **Timesheet Week view**. In this module we can i
 ![Grid Dynamic Date Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/Grid-Dynamic-Date.png)<br/>
 <hr/>
 
-Then we will select **PROJECT** and **TASK**, After that we will eneter time to spend in each tasks. In each grid value entered you can click **_+_** button for generating next grid value. When you click on **_+_** button it will automatically save all data previous grid row value. The delete button available for deleting a row from grid. 
+Then we will select **PROJECT** and **TASK**, After that we will eneter time to spend in each tasks. In each grid value entered you can click **_+_** button for generating next grid value. When you click on **_+_** button it will automatically save all data previous grid row value. The delete button available for deleting a row from grid. Only few project will show in project drop down box. That project should be assigned by _Admin_ in admin part.
 
 [Technologies Used]: #Technology
 [Features]: #Features
