@@ -209,6 +209,9 @@ The task page loading time all previous tasks are showing in React Grid. This dy
 
 We will explaine another module **Timesheet Week view**. In this module we can insert entire times used for each task. Here we are using Grid view for entering times. First we select a date from datepicker and that day should be Friday otherwise validation error will thrown. When we select a date from a week then entire remaining date will calculate by application. That dates will showing on grid. The images are showing below.
 
+![Grid Dynamic Date Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/Grid-Dynamic-Date.png)<br/>
+<hr/>
+
 
 [Technologies Used]: #Technology
 [Features]: #Features
