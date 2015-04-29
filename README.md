@@ -216,6 +216,9 @@ Then we will select **PROJECT** and **TASK**, After that we will eneter time to 
 
 Tha another module with unique feature is project assign to employee from Admin part. In this module we are using auto complete facility to add an employee to project. Both projects and employees are showing as autocomplete and after click on **assign** button the data are save into database and showing in the below table. The image is showing below.
 
+![Grid Dynamic Date Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/TimeLog-Auto.png)<br/>
+<hr/>
+
 [Technologies Used]: #Technology
 [Features]: #Features
 [Functionality]: #Functionality
