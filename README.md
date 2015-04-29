@@ -212,6 +212,7 @@ We will explaine another module **Timesheet Week view**. In this module we can i
 ![Grid Dynamic Date Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/Grid-Dynamic-Date.png)<br/>
 <hr/>
 
+Then we will select **PROJECT** and **TASK**, After that we will eneter time to spend in each tasks. 
 
 [Technologies Used]: #Technology
 [Features]: #Features
