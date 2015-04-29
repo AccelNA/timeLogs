@@ -207,6 +207,9 @@ Which contains different **payloads** and these payloads call corresponding func
     
 The task page loading time all previous tasks are showing in React Grid. This dynamic data are loading from database  before components are rendering. we are using **componentWillMount()** function. In this function we used to call ajax function. **$.ajax()**.this function are bound with **bind()** function and that data are pass into React Griddle for viewing data as Grid with different inbuild grid features like search and sort.
 
+We will explaine another module **Timesheet Week view**. In this module we can insert entire times used for each task. Here we are using Grid view for entering times. First we select a date from datepicker and that day should be Friday otherwise validation error will thrown. When we select a date from a week then entire remaining date will calculate by application. That dates will showing on grid. The images are showing below.
+
+
 [Technologies Used]: #Technology
 [Features]: #Features
 [Functionality]: #Functionality
