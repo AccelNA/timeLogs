@@ -50,7 +50,7 @@ Compare above code and decode value and findout the Role. These Role value is de
 	            }	
     switch(comSwitchRole){
      	case ConfigCom.ROLE_ADMIN:
-           //Render Here
+            //Render Here
         break;   
       default:     
     }
