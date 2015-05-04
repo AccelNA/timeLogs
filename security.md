@@ -55,5 +55,5 @@ Compare above code and decode value and findout the Role. These Role value is de
       default:     
     }
     
-The next step we need to use user id or role in different part of this application. For this pupose we just call **decode** function from JWT object and pass token into this function. This will provide decoded data.    
+The next step we need to use user id or role in different part of this application. For this pupose we just call **decode** function from JWT object and pass token into this function. This will provide decoded data.     
     
