@@ -11,18 +11,24 @@ var ModalTrigger 	= 		ReactBootstrap.ModalTrigger;
 var TextInput		=	    require('../TextInput');
 var ConfigCom       =       require('../../config/ConfigComp');
 
-  var Link = React.createClass({
+
+var data = [] ;
+var project =[];
+
+var Link = React.createClass({
   	
   	getInitialState: function() {
 			
-						  return({
+						 return({
 						  	value : '',
 						  	project_name_opt: [],
 							project_name: 0,
-						  });				
+							data :''
+						  });					
 		},
    setTextState:function(event){
 
+   			console.log(event.target.id);
    			
 
 			 switch(event.target.id){
@@ -34,6 +40,7 @@ var ConfigCom       =       require('../../config/ConfigComp');
 			 		this.setState({note  : event.target.value});
 			 	break;
 			 	case 'project_name':
+			 	    console.log(event.target.value);
 			 		this.setState({project_name  : event.target.value});
 			 	break;
 			 	default:
@@ -49,20 +56,40 @@ var ConfigCom       =       require('../../config/ConfigComp');
 			project_name	= (typeof this.state.project_name !== 'undefined')? this.state.project_name:taskDetails['ProjectName']; 
 			taskId		    = taskDetails['Action']; 
 			
-			taskDetails = {taskName:task_name,note:note,projectName:project_name,taskId:taskId}; 
+			projectArray = project_name.split('*');		
+
+			taskDetails = {taskName:task_name,note:note,projectName:projectArray[0],taskId:taskId,projectId:projectArray[1]}; 
 			
 			
 	  	    TaskAction.taskEdit(taskDetails);
 	  	    document.getElementById('taskForm').style.visibility = "hidden";
 						
 	},
+	componentWillMount : function(){
+				 /*Project List */
+            $.ajax({
+                         url: ConfigCom.serverUrl + "projectlist",
+                         dataType: 'json',
+                         success: function(data) {
+                                  this.setState({data: data});
+                                  
+                         }.bind(this),
+                         error: function(xhr, status, err) {
+                                 console.error(this.props.url, status, err.toString());
+                        }.bind(this)
+                  }); 
+            this.setState({data: data});
+
+		 	
+  		},
    getEditData : function(e){
   		   taskDetails = this.props.rowData;
   		   
-  		   this.state.project_name_opt.push(<option key={0} value={0}>Select</option>);
-    	   this.state.project_name_opt.push(<option key={1} value={'1'}>{'Project 1'}</option> );
-    	   this.state.project_name_opt.push(<option key={2} value={'2'}>{'Project 2'}</option> );
-    	   this.state.project_name_opt.push(<option key={3} value={'3'}>{'Project 3'}</option> );
+  		    //Project Name and Details fro drop down box 
+            var commentNodes = this.state.data.map(function (com) {
+                   prjtValue = com.projectname +"*"+ com.Action;
+                   project.push(<option key={prjtValue}  value={prjtValue}>{com.projectname}</option>);
+               }); 
   		  
   		   React.render(
   		  			<form className="well well-small" id="taskForm" >
@@ -71,12 +98,15 @@ var ConfigCom       =       require('../../config/ConfigComp');
   		  						   <ReactBootstrap.Row>
 	        					   	<ReactBootstrap.Col xs={6}>
 	        					   		
-	        					   		<div className="form-group has-feedback group-class">
-	        									<label className="control-label label-class" htmlFor="project_name">Project Name</label>
-												<select id="project_name" label="Select" className="form-control" onChange={this.setTextState} 
-					       							 value={this.state.project_name} id="project_name" name="project_name" autoFocus="true">					        				         				{this.state.project_name_opt}
-												</select>
-										</div>
+	        	<div className="form-group has-feedback group-class">
+	        					<label className="control-label label-class" htmlFor="project_name">* Project Name</label>
+
+					<select id="project_name" label="Select" className="form-control" onChange={this.setTextState} 
+					        value={this.state.project_name} id="project_name" name="project_name" autoFocus="true">	
+					        {project}				        				         	
+					</select>
+
+				</div>
 	        					   		
 	        					   		<TextInput type="text" label="Task Name" placeholder={taskDetails['TaskName']} id="task_name" 
 							 				 name="task_name" setText={this.setTextState} task_name={this.state.task_name}  />
@@ -125,7 +155,7 @@ var TaskListSection	=	React.createClass({
 		  },
 		 componentDidMount: function() {
 
-		 		 $.get(ConfigCom.serverUrl + 'tasklist', function(result) {
+		 	  $.get(ConfigCom.serverUrl + 'tasklist', function(result) {
                  if (this.isMounted()) {
                            this.setState({taskData:TaskStore.taskList()});
                      }

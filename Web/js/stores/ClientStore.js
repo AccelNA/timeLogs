@@ -10,6 +10,8 @@ var EventEmitter = require('events').EventEmitter;
 var ClientConstants = require('../constants/ClientConstants');
 var assign = require('object-assign');
 var ConfigComp = require('../config/ConfigComp');
+var fetchOp 		=   require('../RESTService/GET');
+
 
 var clients=[];
 
@@ -26,7 +28,7 @@ create : function(clientDetails){
 		 
 		 var clientAllDetail = [clientDetails];
 		 indexVal	=	clients.length;
-		 console.log(clientAllDetail);
+		 
 		 clients[indexVal] = {
 								    "SINo":indexVal+1,
 								    "Client Name": clientAllDetail[0].clientName,
@@ -41,6 +43,16 @@ create : function(clientDetails){
 								    "Country":clientAllDetail[0].countryName,
 								    "Action":indexVal+1
 								  }
+       fetchOp.clientCreate(clientDetails,function(data){}); 	
+          
+	 },
+	 
+clientList : function(){
+	  fetchOp.clientGet(function(data){
+		 return clients = data;
+		 });
+ 	
+	 return clients;
 	 },
 clientDelete:function(clientDetails){
 	
@@ -61,6 +73,8 @@ clientDelete:function(clientDetails){
 		clients=arr;
  		}
 	removeByAttr(arr, 'SINo', inVal);
+
+
   },
 clientEdit:function(clientDetails){
 	

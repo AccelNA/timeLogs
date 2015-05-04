@@ -5,17 +5,26 @@ var axios                =   require('axios');
 var ReactBootstrap       =   require('react-bootstrap');
 var userActions          =   require('../../actions/UserActions');
 
-var buttonStyle = { marginLeft: '16px' };
-var tableStyle = { left: '301px' };
-var tableRow = [] ;
+var buttonStyle =  { marginLeft: '16px' };
+var tableStyle  =  { left: '301px' };
+var tableRow    =  [] ;
 
 var Table = React.createClass({
             
-            getDeleteData : function(){
+           getDeleteData : function(){
+                
+               var rows = document.getElementById('projectUserGrid').getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+                    for (i = 0; i < rows.length; i++) {
+                             rows[i].onclick = function() {
 
-            },
-            content :function(){
-
+                                   rowValue = this.rowIndex + 1;
+                                    
+                      }
+                   }
+             },
+           content :function(){
+               
+               projectFirstArray = this.props.project;
                return [
                          <td>{this.props.project}</td>,
                          <td>{this.props.user}</td>,
@@ -23,11 +32,11 @@ var Table = React.createClass({
                             <ReactBootstrap.Glyphicon glyph="remove" /></ReactBootstrap.Button></td>
                       ]
              },
-            render: function(){
-              return(<tr>{this.content()}</tr>)
+           render: function(){
+              return(<tr class="msgRow">{this.content()}</tr>)
             }
 
-            });
+  });
 
 var App = React.createClass({
     
@@ -43,7 +52,7 @@ var App = React.createClass({
                    cb(resp.data.users.filter(function(one) {
                       
                        return one.user.username.toLowerCase().indexOf(key.toLowerCase()) > -1;
-           }));
+             }));
          });
        }, 1000);
     },
@@ -79,16 +88,16 @@ var App = React.createClass({
 
           projectFirstArray = this.state.projectname;
           projectSecondArray = [];
-          projectSecondArray = userFirstArray.split("-");
+          projectSecondArray = projectFirstArray.split("-");
           projectId=projectSecondArray[0];
-          
-          userDetails={"user":userId,"project":projectId};
+
+          userDetails={"user":projectId,"project":userId};
           userActions.userProjectAssign(userDetails);
     },
     render: function() {
       return (
-     <div>
-
+  <div>
+  <ReactBootstrap.Panel>
         <ReactBootstrap.Grid>
                <ReactBootstrap.Row className="show-grid">
                           <ReactBootstrap.Col xs={6} md={6}>
@@ -96,11 +105,17 @@ var App = React.createClass({
                                <h1>Project Name</h1>
                                 <div className="row">
                                  <div className="col-md-5">
-                                       <AutocompleteInput label="Project Name" 
+                                  <ReactBootstrap.OverlayTrigger placement='left' 
+                                                 overlay={<ReactBootstrap.Tooltip>
+                                              Please type Project Name here 
+                                             </ReactBootstrap.Tooltip>}>
+                                       <AutocompleteInput label="" 
                                           placeholder="Start typing.." 
                                           onSearch={this.searchRequestedProject} 
                                           onItemSelect={this.itemSelectedProject} value={this.state.projectname}
                                        />
+                                  </ReactBootstrap.OverlayTrigger>
+
                                  </div>
                                 </div>
                             </div>                 
@@ -111,10 +126,15 @@ var App = React.createClass({
                                   <h1>Employee Name</h1>
                                         <div className="row">
                                             <div className="col-md-5">
-                                                 <AutocompleteInput label="Employee Name" 
+                                            <ReactBootstrap.OverlayTrigger placement='left' 
+                                                 overlay={<ReactBootstrap.Tooltip>
+                                              Please type Employee Name here 
+                                             </ReactBootstrap.Tooltip>}>
+                                                <AutocompleteInput label="" 
                                                   placeholder="Start typing.." onSearch={this.searchRequested} 
                                                   onItemSelect={this.itemSelected} value={this.state.username} addUserItem={this.addUserItemt} />
-                                             </div>
+                                                </ReactBootstrap.OverlayTrigger>  
+                                             </div> 
                                             </div>
                                         </div>
                     </ReactBootstrap.Col>
@@ -122,7 +142,8 @@ var App = React.createClass({
                    
               <ReactBootstrap.Row className="show-grid">
                   <ReactBootstrap.Col xs={6} md={6}>
-                     <input type="button" value="Add" onClick={this.getValue} style={buttonStyle}/> 
+                     
+                  <ReactBootstrap.Button bsStyle='primary' bsSize='small' style={buttonStyle} onClick={this.getValue}>Assign</ReactBootstrap.Button>
                   </ReactBootstrap.Col>
                 <ReactBootstrap.Col xs={6} md={6}></ReactBootstrap.Col>
               </ReactBootstrap.Row>
@@ -134,7 +155,7 @@ var App = React.createClass({
               <ReactBootstrap.Row className="show-grid" >
                   <ReactBootstrap.Col xs={6} md={6}  style={tableStyle}>
                    
-                  <ReactBootstrap.Table  striped bordered condensed hover>
+                  <ReactBootstrap.Table  striped bordered condensed hover id="projectUserGrid">
                      <thead>
                        <th>Project</th>
                        <th>Employee</th>
@@ -149,9 +170,8 @@ var App = React.createClass({
                   </ReactBootstrap.Col>
                 <ReactBootstrap.Col xs={6} md={6}></ReactBootstrap.Col>
               </ReactBootstrap.Row>
-
-
-    </ReactBootstrap.Grid>   
+       </ReactBootstrap.Grid>   
+</ReactBootstrap.Panel>
   </div>
   );
  }

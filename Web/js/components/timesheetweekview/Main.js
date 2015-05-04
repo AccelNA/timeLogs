@@ -1,6 +1,5 @@
 /*
  * @Date 10-03-2015
- * Modified Date 22-04-2015
  * The File is used for USER creation 
  * Dependency /components/TextInput.js 
  * Dependency /components/Calender.js 
@@ -31,6 +30,17 @@ var data =[];
 var project = [];
 var task  = [];
 var taskdata= [];
+var userId;
+var tokenValue      =   $.cookie('tokengen');
+if(tokenValue !== undefined){
+            var secret          =   ConfigCom.secretKey; 
+                decodedValue    =   jwt.decode(tokenValue, secret);
+                userId       =   decodedValue.userId;
+        }   
+    else{
+              userId         =   null;
+    }
+
 
 var GridView = React.createClass({
    
@@ -110,9 +120,7 @@ var TimeSheetDayViewMain	=	React.createClass({
      }
   else {*/
 
-        console.log(startDt);
-        console.log(endDt);
-        
+               
          var currentDate = new Date(startDt),
                      end = new Date(endDt); 
 
@@ -253,7 +261,7 @@ var TimeSheetDayViewMain	=	React.createClass({
                                      "hours1": hoursValue[6]
                                 },
                          "task" : taskArray[1],
-                         "user" : $.cookie('userId')
+                         "user" : userId
                 };
                 
         taskDetails = (JSON.stringify(GridJsonData));        
@@ -275,8 +283,6 @@ var TimeSheetDayViewMain	=	React.createClass({
 
           
             /*Project List */
-
-            userId = $.cookie('userId');
 
             $.ajax({
                          url      : ConfigCom.serverUrl + "projectlistuser/user/"+userId,

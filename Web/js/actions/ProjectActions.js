@@ -26,6 +26,7 @@
 			});
 	},//Delete User 
 	projectDelete : function(ProjectDetails){
+		
 		AppDispatcher.handleViewAction({
 				actionType : ProjectConstants.PROJECT_DELETE,
 				ProjectDetails:ProjectDetails	

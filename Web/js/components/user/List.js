@@ -39,9 +39,10 @@ var ConfigCom       =       require('../../config/ConfigComp');
 	 updateUser:function(){
 	 	
 	  	    firstName 	= (typeof this.state.first_name !== 'undefined')? this.state.first_name:userDetail['First Name']; 
-			lastName  	= (typeof this.state.last_name !== 'undefined')? this.state.last_name:userDetail['Second Name']; 
+			lastName  	= (typeof this.state.last_name !== 'undefined')? this.state.last_name:userDetail['Last Name']; 
 			employeeId	= userDetail['Employee ID']; 
 			userDetails = {firstName:firstName,lastName:lastName,employeeId:employeeId}; 
+			console.log(userDetails);
 	  	    UserAction.userEdit(userDetails);
 	  	    document.getElementById('userForm').style.visibility = "hidden";
 	  	    
@@ -49,7 +50,10 @@ var ConfigCom       =       require('../../config/ConfigComp');
   	 getEditData : function(event){
   	 	
   		  userDetail = (this.props.rowData);
+  		  console.log(userDetail);
   		  this.setState({first_name  : userDetail['First Name']}); 
+  		
+  		  this.setState({first_name  : userDetail[' Last Name']}); 
   		    		  
   		  React.render(
   		  <form className="well well-small" id="userForm" >
@@ -61,7 +65,7 @@ var ConfigCom       =       require('../../config/ConfigComp');
 								  							name="first_name" setText={this.setTextState}  
 								  							first_name={this.state.first_name} />
 								  							
-								  	 <TextInput type="text" label="Last Name" placeholder={userDetail['Second Name']} id="last_name"
+								  	 <TextInput type="text" label="Last Name" placeholder={userDetail['Last Name']} id="last_name"
 									                        name="last_name" setText={this.setTextState} />	
 									                        
 									 <TextInput type="text" label="Emplyee ID"  id="employee_id"

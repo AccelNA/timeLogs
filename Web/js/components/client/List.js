@@ -8,7 +8,9 @@ var ClientStore 	= 	 	require('../../stores/ClientStore');
 var TextInput		=	 	require('../TextInput');
 var Modal 			= 		ReactBootstrap.Modal;
 var ModalTrigger    =       ReactBootstrap.ModalTrigger;
+var ConfigCom       =     require('../../config/ConfigComp');
 
+var clientData = [];
 
 var Link = React.createClass({
   	
@@ -82,18 +84,16 @@ var Link = React.createClass({
 			clientId		=	 clientDetail['Action']; 
 			
 			clientDetails	=	{clientName:client_name,website:website,emailId:email_id,Phone:phone,Fax:fax,addressLine1:address_line1,
-	           			addressLine2:address_line2,City:city,stateCounty:state_county,zipPostcode:zip_postcode,countryName:country_name};
+	           			         addressLine2:address_line2,City:city,stateCounty:state_county,zipPostcode:zip_postcode,countryName:country_name};
 	           			
-	       
-	           
-	  	    ClientAction.clientEdit(clientDetails);
+	        ClientAction.clientEdit(clientDetails);
 	  	    
-	  	    document.getElementById('clientForm').style.visibility = "hidden";;
+	  	    document.getElementById('clientForm').style.visibility = "hidden";
 	  	    
 	  },
   	getEditData : function(e){
   		  
-  		  clientDetail = (this.props.rowData);
+  		     clientDetail = (this.props.rowData);
   		  
   		     this.state.country_name_opt.push(<option key={0} value={0}>Select</option>);
      		 this.state.country_name_opt.push(<option key={1} value={'Austria'}>{'Austria'}</option> );
@@ -153,9 +153,7 @@ var Link = React.createClass({
           					 	  
           					 </ReactBootstrap.Row>
         			   </Modal>
-  		   </form>
-  		  
-  		  ,document.getElementById('modalWindow')
+  		   </form>,document.getElementById('modalWindow')
   		  
   		  );
   		 document.getElementById('clientForm').style.visibility = "visible";  
@@ -182,20 +180,32 @@ var Link = React.createClass({
 
 var ListSection	=	React.createClass({
 
-		 getInitialState : function(){
+		getInitialState : function(){
 		   return{
 			 	clientData:ClientAction.clientList()
 			 }
 		  },
-         componentWillMount : function(){
+        componentWillMount : function(){
          	         this.setState({clientData:ClientStore.clientList()});
          	          ClientStore.removeChangeListener(this._onChange);
           	         	
 			},
-		 componentDidMount: function() {
-   				ClientStore.addChangeListener(this._onChange);
-  			},
-		 render  : function(){
+		componentDidMount: function() {
+                 
+            $.get(ConfigCom.serverUrl + 'clientlist', function(result) {
+                 if (this.isMounted()) {
+                          this.setState(
+                                 {clientData:ClientStore.clientList()}
+
+                              );
+                          	
+                     }
+               }.bind(this));
+
+            ClientStore.addChangeListener(this._onChange);
+
+         },
+		render  : function(){
          	
         var columnMeta = [
             {

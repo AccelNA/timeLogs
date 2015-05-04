@@ -69,24 +69,26 @@ userDelete:function(userDetails){
 
   },
 userEdit:function(userDetails){
-  			
+  			     fetchOp.employeeEdit(userDetails);
+  			     console.log(userDetails);
+
   				 for (var i in users) {
   					 	
   					 	 updatedUser =users[i];
    							  if (updatedUser['Employee ID'] == userDetails.employeeId) {
    							  
    							  		 updatedUser['First Name'] = userDetails.firstName;
-      								 updatedUser['Second Name']= userDetails.lastName;
+      								 updatedUser['Last Name']= userDetails.lastName;
       								 
       		 }
       							
   		 }
 		
-	 fetchOp.employeeEdit(userDetails); 	
+	
 	  			
   },
 userProjectAssign:function(userDetails){
-
+       
 		fetchOp.employeeProjectAssign(userDetails,function(data){}); 			
 
 },

@@ -56,18 +56,16 @@ var UserMain	=	React.createClass({
 
 			if(firstName  ==  undefined || lastName == undefined || employeeId == undefined || userEmail == undefined){
                         this.setState({errorMessage : 'Field Cannot Be Empty!'});
-                  return;
+                        return;
                  }
 
                 else{
                       userDetails = {firstName:firstName,lastName:lastName,employeeId:employeeId,userEmail:userEmail}; 
-					 UserAction.create(userDetails);
+					  UserAction.create(userDetails);
                 }		
-
 		
-			
-	},
-		render	:	function(){
+  },
+	render	:	function(){
 			       		return(
 			        	<div>
 			        	

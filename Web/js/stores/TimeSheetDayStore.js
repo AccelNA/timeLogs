@@ -10,13 +10,29 @@ var EventEmitter 			=	 require('events').EventEmitter;
 var TimesheetConstants 		=	 require('../constants/TimeSheetDayConstants');
 var assign 					= 	 require('object-assign');
 var fetchOp 		        =    require('../RESTService/GET');
+var jwt                     =    require('jwt-simple');
+var ConfigCom			    =	 require('../config/ConfigComp');
 
 var timesheets=[];
-var CHANGE_EVENT = 'change';
+var CHANGE_EVENT    = 'change';
+
+var tokenValue		= 	$.cookie('tokengen');
+var secret ; 
+var decodedValue;
+var comuserId;
+
+
+if(tokenValue !== undefined){
+			var secret 			= 	ConfigCom.secretKey; 
+			    decodedValue 	= 	jwt.decode(tokenValue, secret);
+			    comuserId 	    = 	decodedValue.userId;
+		}	
+	else{
+			  comuserId 	    = 	null;
+	}
+
 
 var TimesheetDayStore	=	 assign({}, EventEmitter.prototype, {
-	
- 
 
 create : function(timeDetails){
 			
@@ -69,8 +85,7 @@ create : function(timeDetails){
   },
 timeList : function(comuserId,currentdate){
 
-	comuserId	=	$.cookie('userId');
-    currentdate =   $.cookie('currentdate');
+	  currentdate =   $.cookie('currentdate');
 			
 	  fetchOp.todayTimesheetGet(comuserId,currentdate,function(data){
 		 return timesheets = data;
@@ -80,8 +95,7 @@ timeList : function(comuserId,currentdate){
 	 },
 timeCustomList : function(currentdate){
 
-	comuserId	=	$.cookie('userId');
-    fetchOp.todayTimesheetGet(comuserId,currentdate,function(data){
+	fetchOp.todayTimesheetGet(comuserId,currentdate,function(data){
 		 return timesheets = data;
 		 });
  	

@@ -1,5 +1,6 @@
 var React               =       require('react');
 var ConfigCom			=	 	require('./config/ConfigComp');
+var jwt                 =       require('jwt-simple');
 
 var Router = require('react-router'); // or var Router = ReactRouter; in browsers
 var Route = Router.Route, DefaultRoute = Router.DefaultRoute, Link=Router.Link, RouteHandler = Router.RouteHandler;
@@ -15,8 +16,8 @@ var Footer = require('./components/Footer');
 
 var Dashboard           = require('./components/Dashboard/Main');
 var Project             = require('./components/project/Main');
-var Tasks 		= require('./components/task/Main');
-var User 		= require('./components/user/Main');
+var Tasks 		        = require('./components/task/Main');
+var User 		        = require('./components/user/Main');
 var Client 		= require('./components/client/Main');
 var TimeSheetDayView    = require('./components/timesheetdayview/Main');
 var Login 		= require('./components/Login/Main');
@@ -29,12 +30,23 @@ var comSwitchRolew = [];
 
 var App = React.createClass({
 
-	componentWillMount: function(){},
-    componentDidMount : function(){},
+
 	render: function () { 
 
-	comSwitchRole = $.cookie('role');
-		
+	var tokenValue		= 	$.cookie('tokengen');
+			
+	var comSwitchRole;
+
+	if(tokenValue !== undefined){
+			var secret 			= 	ConfigCom.secretKey; 
+			var decodedValue 	= 	jwt.decode(tokenValue, secret);
+			comSwitchRole 	    = 	decodedValue.role;
+		}	
+	else{
+			comSwitchRole 	= 	ConfigCom.ROLE_GUEST;
+	}	
+
+
     switch(comSwitchRole){
 
     	case ConfigCom.ROLE_ADMIN:
@@ -90,7 +102,7 @@ var App = React.createClass({
 									<Nav bsStyle="pills" Select={this.handleSubmit} id="">
 										<NavItemLink to="Dashboard">Dashboard</NavItemLink>
 										<NavItemLink to="Login">Login</NavItemLink>
-										<NavItemLink to="SignUp">SignUp</NavItemLink>
+										
 									</Nav>	
 							</div>	
 						</header>
@@ -112,7 +124,7 @@ var routes = (
     <Route name="app" path="/" handler={App}>
     <Route name="Dashboard" handler={Dashboard}/>
     <Route name="Login" handler={Login}/>
-    <Route name="SignUp" handler={SignUp}/>
+    
     <Route name="project" handler={Project}/>
     <Route name="tasks" handler={Tasks}/>
     <Route name="user" handler={User}/>

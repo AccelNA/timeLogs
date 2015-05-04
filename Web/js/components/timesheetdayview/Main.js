@@ -4,14 +4,16 @@
  * Dependency /components/TextInput.js 
  * Dependency /components/Calender.js 
  */
-var React			 =	 require('react');
-var DatePicker 		 = 	 require('react-date-picker');
-var TextInput		 =	 require('../TextInput');
-var DynamicRow		 =   require('./List');
+var React			       =	 require('react');
+var DatePicker 		   = 	 require('react-date-picker');
+var TextInput		     =	 require('../TextInput');
+var DynamicRow		   =   require('./List');
 var	ReactBootstrap	 =	 require('react-bootstrap');
 var TimesheetStore   =   require('../../stores/ProjectStore');
 var TimesheetActions =   require('../../actions/TimesheetActions');
 var ConfigCom        =   require('../../config/ConfigComp');
+var jwt              =    require('jwt-simple');
+
 
 var data =[];
 var project = [];
@@ -25,6 +27,18 @@ var divStyle = {color: 'red'};
 var mandetoryStyle = {color : 'red'};
 var workDetails   = []; 
 var projectResult = [];
+var userId;
+
+var tokenValue    =   $.cookie('tokengen');
+if(tokenValue !== undefined){
+      var secret      =   ConfigCom.secretKey; 
+          decodedValue  =   jwt.decode(tokenValue, secret);
+          userId       =   decodedValue.userId;
+    } 
+  else{
+          userId       =   null;
+  }
+
 
 
 var TimeSheetDayViewMain	=	React.createClass({
@@ -75,12 +89,9 @@ var TimeSheetDayViewMain	=	React.createClass({
         taskName       =    this.state.task_name;
         taskArray      =    taskName.split('*');
 
-        console.log(projectArray);
-        console.log(taskArray);
-        console.log(clientArray);
-
+        
         hours          =    this.state.hours_id;
-        userId         =    $.cookie('userId'),
+       
         date           =    this.state.choose_date 
         timeDetails    =    {
                              clientName:clientArray[0],
@@ -130,9 +141,8 @@ var TimeSheetDayViewMain	=	React.createClass({
 
          /*Project List */
            
-            userId = $.cookie('userId');
-
-            $.ajax({
+          
+           $.ajax({
                          url      : ConfigCom.serverUrl + "projectlistuser/user/"+userId,
                          dataType: 'json',
                          success: function(data) {

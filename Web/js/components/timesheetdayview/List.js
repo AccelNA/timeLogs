@@ -10,7 +10,20 @@ var Modal 			    = 		ReactBootstrap.Modal;
 var ModalTrigger    =       ReactBootstrap.ModalTrigger;
 var ConfigCom       =       require('../../config/ConfigComp');
 
-  var Link = React.createClass({
+var comuserId;
+var tokenValue    =   $.cookie('tokengen');
+
+if(tokenValue !== undefined){
+      var secret      =   ConfigCom.secretKey; 
+          decodedValue  =   jwt.decode(tokenValue, secret);
+          comuserId       =   decodedValue.userId;
+    } 
+  else{
+        comuserId       =   null;
+  }
+
+
+var Link = React.createClass({
   	
   	  getInitialState: function() {
 			
@@ -35,10 +48,12 @@ var ConfigCom       =       require('../../config/ConfigComp');
     }
   });
 
+
+
 var today = new Date();
-var comuserId = $.cookie('userId');
 var currentdate = today.toISOString().substring(0, 10);
 $.cookie('currentdate', currentdate);
+
 
 var ListSection	=	React.createClass({
 
@@ -57,7 +72,7 @@ var ListSection	=	React.createClass({
           
           $.get(ConfigCom.serverUrl + "timelisttoday/userid/"+comuserId+"/currentdate/"+currentdate, function(result) {
                  if (this.isMounted()) {
-                           
+                            console.log(result);
                             this.setState({timeData:result});
                            // console.log(TimeStore.timeList(comuserId,currentdate));
                           //  this.setState({timeData:TimeStore.timeList(comuserId,currentdate)});

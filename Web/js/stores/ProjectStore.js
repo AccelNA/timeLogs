@@ -80,12 +80,17 @@ projectList : function(){
 projectEdit:function(ProjectDetails){
   			
   		
+
   				 for (var i in projects) {
   					 	
   					 	 updatedProject =projects[i];
   					 	   if (updatedProject['Action'] == ProjectDetails.projectId) {
    							  
-   							  		 updatedProject['Client Name'] 	= 	ProjectDetails.client_name;
+   							         client = ProjectDetails.client_name;
+   							         console.log(client);
+   							         clientArray  = client.split('*');
+   							  		 updatedProject['Client Name'] 	= 	clientArray[0];
+   							  		 updatedProject['ClientId'] 	= 	clientArray[1];
       								 updatedProject['Project Name']	= 	ProjectDetails.project_name;
       								 updatedProject['Description']	= 	ProjectDetails.description;
       		 }

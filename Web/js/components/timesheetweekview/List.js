@@ -9,8 +9,23 @@ var TextInput		    =	 	require('../TextInput');
 var Modal 			    = 		ReactBootstrap.Modal;
 var ModalTrigger    =       ReactBootstrap.ModalTrigger;
 var ConfigCom       =       require('../../config/ConfigComp');
+var jwt             =    require('jwt-simple');
 
-  var Link = React.createClass({
+var tokenValue    =   $.cookie('tokengen');
+var comuserId;
+
+if(tokenValue !== undefined){
+      var secret      =   ConfigCom.secretKey; 
+          decodedValue  =   jwt.decode(tokenValue, secret);
+          comuserId       =   decodedValue.userId;
+    } 
+  else{
+        comuserId       =   null;
+  }
+
+
+
+var Link = React.createClass({
   	
   	  getInitialState: function() {
 			
@@ -36,7 +51,6 @@ var ConfigCom       =       require('../../config/ConfigComp');
   });
 
 var today = new Date();
-var comuserId = $.cookie('userId');
 var currentdate = today.toISOString().substring(0, 10);
 $.cookie('currentdate', currentdate);
 

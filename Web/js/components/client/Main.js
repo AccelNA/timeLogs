@@ -69,7 +69,7 @@ var ClientMain	=	React.createClass({
 				  	break;
 				  }
 	
-		},
+		}, 
 		addClient : function(){
 			
 		    client_name = this.state.client_name;

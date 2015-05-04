@@ -61,6 +61,7 @@ var Tasks = React.createClass({
 
                 else{
                        taskDetails = {taskName:task_name,note:note,projectName:projectArray[0],projectId:projectArray[1]}; 
+                       console.log(taskDetails);
 					   TaskAction.create(taskDetails);
                 }		
 
@@ -105,7 +106,7 @@ var Tasks = React.createClass({
 
 					<select id="project_name" label="Select" className="form-control" onChange={this.setTextState} 
 					        value={this.state.project_name} id="project_name" name="project_name" autoFocus="true">	
-					        {project}				        				         	{this.state.project_name_opt}
+					        {project}				        				         	
 					</select>
 
 					</div>

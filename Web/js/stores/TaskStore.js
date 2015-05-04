@@ -75,8 +75,8 @@ taskEdit:function(taskDetails){
       		 }
       							
   		 }
-		
-	fetchOp.employeeEdit(taskDetails); 
+		console.log(taskDetails);
+	fetchOp.taskEditAjax(taskDetails,function(data){}); 
 	  			
   },  
   

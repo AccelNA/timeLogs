@@ -11,6 +11,9 @@ var ModalTrigger    =     ReactBootstrap.ModalTrigger;
 var TextInput       =     require('../TextInput');
 var ConfigCom       =     require('../../config/ConfigComp');
 
+var client = [];
+var clientdata =[];
+
   var Link = React.createClass({
   	
 
@@ -48,6 +51,24 @@ var ConfigCom       =     require('../../config/ConfigComp');
         default:
     }
   },
+  componentWillMount : function(){
+    
+          /*Client List */
+            $.ajax({
+                         url: ConfigCom.serverUrl + "clientlist",
+                         dataType: 'json',
+                         success: function(clientdata) {
+                                  this.setState({clientdata: clientdata});
+                                  
+                         }.bind(this),
+                         error: function(xhr, status, err) {
+                                 console.error(this.props.url, status, err.toString());
+                        }.bind(this)
+                  }); 
+           this.setState({clientdata: clientdata});
+      
+
+  },
   updateproject:function(){
             
       project_name     = (typeof this.state.project_name !== 'undefined')? this.state.project_name:projectDetails['Project Name']; 
@@ -65,9 +86,6 @@ var ConfigCom       =     require('../../config/ConfigComp');
         projectId:projectId
         }; 
 
-
-     
-
      ProjectAction.update(ProjectDetail);
     
      document.getElementById('projectForm').style.visibility = "hidden";
@@ -76,10 +94,12 @@ var ConfigCom       =     require('../../config/ConfigComp');
 
  	getEditData : function(e){
 
-     this.state.client_name_opt.push( <option key={0} value={''}>Select</option>);
-     this.state.client_name_opt.push( <option key={1} value={'1'}>{'Client1'}</option> );
-     this.state.client_name_opt.push( <option key={2} value={'2'}>{'Client2'}</option> );
-     this.state.client_name_opt.push( <option key={3} value={'3'}>{'Client3'}</option> );
+    
+          //Change Client name from here
+            var commentNodes = this.state.clientdata.map(function (clnt) {
+                   clientValue = clnt.clientname +"*"+ clnt.Action;
+                   client.push(<option key={clientValue} value={clientValue}>{clnt.clientname}</option>);
+               }); 
 
 
   		  projectDetails = this.props.rowData;
@@ -94,7 +114,7 @@ var ConfigCom       =     require('../../config/ConfigComp');
                   <label className="control-label label-class" htmlFor="client_name">Client Name</label>
                   <select id="client_name" label="Select" className="form-control" onChange={this.setTextState} 
                     value={this.state.client_name} id="client_name" name="client_name" autoFocus="true">                 
-                      {this.state.client_name_opt}
+                     {client}
                 </select>
                 </div>  
 
@@ -131,6 +151,7 @@ var ConfigCom       =     require('../../config/ConfigComp');
 	 },
 	getDeleteData : function(e){
 		 
+     
         if (confirm("Do you want to Delete this Project Details")) {
             ProjectAction.projectDelete(this.props.rowData);
 
