@@ -18,6 +18,12 @@ For implementing JWT system in this application, we are following the steps from
 
 Next step is, you need to login with your creadentials. In this time, authentication is checked with login details. If authentication is success then it will return success message with some user details. The login operation is carried in this [file](https://github.com/AccelNA/timeLogs/blob/master/Web/js/RESTService/Get.js). Here a function name _authGet_ handling all these operation. 
 
-In this file we created an object for _jwt-simple_. Then we creating a object which contains user id and user role. Here the object name is **payload**. The [configuration file](https://github.com/AccelNA/timeLogs/blob/master/Web/js/config/ConfigComp.js) have a secret key. This secret ke is using for encode operation.
+In this file we created an object for _jwt-simple_. Then we creating a object which contains user id and user role. Here the object name is **payload**. The [configuration file](https://github.com/AccelNA/timeLogs/blob/master/Web/js/config/ConfigComp.js) have a secret key. This secret key is using for encode operation.
+
+For generating encrypted key or token, we have used **encode()** function which is inbuild function in jwt package. This function accept two parameters, First parameter is user details data. Here this information is stored in **payload** object. The second parameter is **secret** key. These key value gets from config file. The function
+
+    var token   = jwt.encode(payload, secret);  
+is generating a token, which is stored in token varable and these value are stored temporarly in cookie.  
+
 
 
