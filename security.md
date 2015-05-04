@@ -34,7 +34,7 @@ In **_app.js_** is handling all the routing operation. As already described, In 
     ROLE_USER  :'USER',
     ROLE_GUEST :'GUEST' 
     
-    compare above code and decode value and findout the Role. These Role value is determines which template is need to render in view part. 
+compare above code and decode value and findout the Role. These Role value is determines which template is need to render in view part. 
  
 
 
