@@ -29,6 +29,7 @@ In **_app.js_** is handling all the routing operation. As already described, In 
 
     var decodedValue 	= 	jwt.decode(tokenValue, secret);
  Here we can decode these token value. After this decoding operation we will get role and user id. In configuration file contains 
+ 
     ROLE_ADMIN :'ADMIN',
     ROLE_USER  :'USER',
     ROLE_GUEST :'GUEST' 
