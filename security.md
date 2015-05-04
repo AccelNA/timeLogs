@@ -34,7 +34,7 @@ In **_app.js_** is handling all the routing operation. As already described, In 
     ROLE_USER  :'USER',
     ROLE_GUEST :'GUEST' 
     
-compare above code and decode value and findout the Role. These Role value is determines which template is need to render in view part. 
+Compare above code and decode value and findout the Role. These Role value is determines which template is need to render in view part. 
 
     var App = React.createClass({
      	render: function () { 
@@ -54,7 +54,6 @@ compare above code and decode value and findout the Role. These Role value is de
         break;   
       default:     
     }
-
-
-
-
+    
+The next step we need to use user id or role in different part of this application. For this pupose we just call **decode** function from JWT object and pass token into this function. This will provide decoded data.    
+    
