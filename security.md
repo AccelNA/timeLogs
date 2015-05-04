@@ -15,3 +15,7 @@ Here In this application, we are using JSON Web Tokens system(JWT). For understa
 For implementing JWT system in this application, we are following the steps from a node package which is named as [jwt simple](https://www.npmjs.com/package/jwt-simple). First we need to install these package in to this application. 
 
 **_npm install jwt-simple_**
+
+Next step is, you need to login with your creadentials. In this time, authentication is checked with login details. If authentication is success then it will return success message with some user details. The login operation is carried in this [file](https://github.com/AccelNA/timeLogs/blob/master/Web/js/RESTService/Get.js). Here a function name _authGet_ handling all these operation.
+
+
