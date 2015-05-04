@@ -55,5 +55,5 @@ Compare above code and decode value and findout the Role. These Role value is de
       default:     
     }
     
-The next step we need to use user id or role in different part of this application. For this pupose we just call **decode** function from JWT object and pass token into this function. This will provide decoded data.     
+The next step we need to use user id or role in different part of this application. For this pupose we just call **decode** function from JWT object and pass token into this function. This will provide decoded data. The default algorithm for data encryption is **HS256**. But we have some other algorithm to support in encrypt operation that are _**HS256, HS384, HS512 and RS256**_.    
     
