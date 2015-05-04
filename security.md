@@ -35,8 +35,25 @@ In **_app.js_** is handling all the routing operation. As already described, In 
     ROLE_GUEST :'GUEST' 
     
 compare above code and decode value and findout the Role. These Role value is determines which template is need to render in view part. 
- 
 
+  var App = React.createClass({
+     	render: function () { 
+           var tokenValue		= 	$.cookie('tokengen');
+          	var comSwitchRole;
+          	if(tokenValue !== undefined){
+			             var secret 			    = 	ConfigCom.secretKey; 
+			             var decodedValue 	= 	jwt.decode(tokenValue, secret);
+			             comSwitchRole 	   = 	decodedValue.role;
+		          }	
+	         else{
+			            comSwitchRole 	= 	ConfigCom.ROLE_GUEST;
+	            }	
+    switch(comSwitchRole){
+     	case ConfigCom.ROLE_ADMIN:
+           //Render Here
+        break;   
+      default:     
+    }
 
 
 
