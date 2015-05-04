@@ -23,7 +23,20 @@ In this file we created an object for _jwt-simple_. Then we creating a object wh
 For generating encrypted key or token, we have used **encode()** function which is inbuild function in jwt package. This function accept two parameters, First parameter is user details data. Here this information is stored in **payload** object. The second parameter is **secret** key. These key value gets from config file. The function
 
     var token   = jwt.encode(payload, secret);  
-is generating a token, which is stored in token varable and these value are stored temporarly in cookie.  
+is generating a token, which is stored in token variable and these value are stored temporarly in cookie.
+
+In **_app.js_** is handling all the routing operation. As already described, In this application have two types of views are rendering.First is ADMIN and second is Employee. In **app.js** file, first accept cookie value which is named as **tokengen**. This varable contains a encrypted data. Then decode these value by 
+
+    var decodedValue 	= 	jwt.decode(tokenValue, secret);
+ Here we can decode these token value. After this decoding operation we will get role and user id. In configuration file contains 
+    ROLE_ADMIN :'ADMIN',
+    ROLE_USER  :'USER',
+    ROLE_GUEST :'GUEST' 
+    
+    compare above code and decode value and findout the Role. These Role value is determines which template is need to render in view part. 
+ 
+
+
 
 
 
