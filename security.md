@@ -16,6 +16,8 @@ For implementing JWT system in this application, we are following the steps from
 
 **_npm install jwt-simple_**
 
-Next step is, you need to login with your creadentials. In this time, authentication is checked with login details. If authentication is success then it will return success message with some user details. The login operation is carried in this [file](https://github.com/AccelNA/timeLogs/blob/master/Web/js/RESTService/Get.js). Here a function name _authGet_ handling all these operation.
+Next step is, you need to login with your creadentials. In this time, authentication is checked with login details. If authentication is success then it will return success message with some user details. The login operation is carried in this [file](https://github.com/AccelNA/timeLogs/blob/master/Web/js/RESTService/Get.js). Here a function name _authGet_ handling all these operation. 
+
+In this file we created an object for _jwt-simple_. Then we creating a object which contains user id and user role. Here the object name is **payload**. The [configuration file](https://github.com/AccelNA/timeLogs/blob/master/Web/js/config/ConfigComp.js) have a secret key. This secret ke is using for encode operation.
 
 
