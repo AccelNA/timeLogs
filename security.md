@@ -52,9 +52,9 @@ Compare above code and decode value and findout the Role. These Role value is de
            var tokenValue		= 	$.cookie('tokengen');
           	var comSwitchRole;
           	if(tokenValue !== undefined){
-			             var secret 			    = 	ConfigCom.secretKey; 
+			             var secret 	= 	ConfigCom.secretKey; 
 			             var decodedValue 	= 	jwt.decode(tokenValue, secret);
-			             comSwitchRole 	   = 	decodedValue.role;
+			             comSwitchRole 	= 	decodedValue.role;
 		          }	
 	         else{
 			            comSwitchRole 	= 	ConfigCom.ROLE_GUEST;
