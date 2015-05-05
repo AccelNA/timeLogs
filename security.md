@@ -20,9 +20,20 @@ Next step is, you need to login with your creadentials. In this time, authentica
 
 In this file we created an object for _jwt-simple_. Then we creating a object which contains user id and user role. Here the object name is **payload**. The [configuration file](https://github.com/AccelNA/timeLogs/blob/master/Web/js/config/ConfigComp.js) have a secret key. This secret key is using for encode operation.
 
-For generating encrypted key or token, we have used **encode()** function which is inbuild function in jwt package. This function accept two parameters, First parameter is user details data. Here this information is stored in **payload** object. The second parameter is **secret** key. These key value gets from config file. The function
+For generating encrypted key or token, we have used **encode()** function which is inbuild function in jwt package. This function accept two parameters, First parameter is user details data. Here this information is stored in **payload** object. The second parameter is **secret** key. 
+
+The secrete key available in config.js file is as follows
+
+    ConfigComp = {
+          secretKey : 'AnySecretKeyyouCan@Use'
+    }
+    module.exports = ConfigComp;
+
+These key value gets from config file and encoding function is
 
     var token   = jwt.encode(payload, secret);  
+    
+    
 is generating a token, which is stored in token variable and these value are stored temporarly in cookie.
 
 In **_app.js_** is handling all the routing operation. As already described, In this application have two types of views are rendering.First is ADMIN and second is Employee. In **app.js** file, first accept cookie value which is named as **tokengen**. This varable contains a encrypted data. Then decode these value by 
