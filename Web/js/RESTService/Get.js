@@ -135,8 +135,6 @@ projectDelete : function(projectId,callback){
 projectEdit : function(projectDetails,callback){
     
     var projectDetail = new Object();
-
-    console.log(projectDetails);
     client = projectDetails.client_name;
     clientArray = client.split('*');
     projectDetail.projectName = projectDetails.project_name;
@@ -218,8 +216,6 @@ userDelete  :function(employeeId,callback){
          var employeeDetail = new Object();
          employeeDetail.employeeId = employeeId;
           
-
-
          var pluginArrayUser = new Array();
          pluginArrayUser.push(employeeDetail); 
 
@@ -242,7 +238,6 @@ userDelete  :function(employeeId,callback){
 
 employeeEdit : function(userDetails){
 
-    console.log(userDetails); 
     var userDetail = new Object();
     userDetail.employeeName = userDetails.firstName;
     userDetail.lastName = userDetails.lastName;
@@ -262,8 +257,6 @@ employeeEdit : function(userDetails){
 
          });
 },
-
-
 
 /*
  * Get All tasks Details
@@ -288,9 +281,6 @@ employeeEdit : function(userDetails){
  */
  taskCreate : function(taskAllDetails,callback){
 
-    console.log(taskAllDetails);
-
-   
     var taskDetail = new Object();
     taskDetail.taskName = taskAllDetails[0].taskName;
     taskDetail.projectName = taskAllDetails[0].projectName;
@@ -395,7 +385,6 @@ todayTimesheetGet : function(userId,currentdate,callback){
  
  timesheetCreate : function(timeAllDetails,callback){
 
-    console.log(timeAllDetails);
     var timeAllDetail        =   new Object();
     timeAllDetail.Hours      =   timeAllDetails.hours;
     timeAllDetail.Task       =   timeAllDetails.taskId;
@@ -416,8 +405,6 @@ todayTimesheetGet : function(userId,currentdate,callback){
                 success : callback
 
          });
-
-
  },
 
 /* Timesheet Delete
@@ -494,7 +481,6 @@ timeDelete  :function(timeId,callback){
 
     
     var clientDetail = new Object();
-    console.log(clientDetails);
     clientDetail.ClientName = clientDetails.clientName;
    
     var pluginArrayClient = new Array();
@@ -509,8 +495,6 @@ timeDelete  :function(timeId,callback){
                 success : callback
 
          });
-
-
  },
 
 /*
@@ -526,11 +510,35 @@ clientGet : function(callback){
                 dataType : "jsonp",
                 type : "GET",
                 success : callback
-
-        });
+          });
  },
 
+/*
+ * Get All members effort based on project
+ * @ 11-05-2015 
+ * Jagadeesh puthukkudi 
+ */
+  projectMemberseffort:function(projectId,callback){
+
+    
+   var report  = new Object();
+       report.project = projectId;
+    
+   var pluginArrayProject = new Array();
+       pluginArrayProject.push(report);   
+     
+
+     $.ajax({
+                        url : ConfigCom.serverUrl +'projectreportonmember',
+                        dataType : "json",
+                        data    : JSON.stringify(pluginArrayProject),
+                        type : "POST",
+                        success : function(responsereportMemberDetails){
+                                callback(responsereportMemberDetails);
+                           
+                          }
+     });
+}
 
 };
 module.exports = GETDATA;
-

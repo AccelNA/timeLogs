@@ -14,6 +14,7 @@ var TimesheetActions     =   require('../../actions/TimesheetweekActions');
 var ConfigCom            =   require('../../config/ConfigComp');
 var RButton              =   require('../Button');
 var Calendar             =   require('react-input-calendar');
+var jwt                  =    require('jwt-simple');
 
 
 var date = new Date();

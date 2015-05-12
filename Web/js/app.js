@@ -18,12 +18,14 @@ var Dashboard           = require('./components/Dashboard/Main');
 var Project             = require('./components/project/Main');
 var Tasks 		        = require('./components/task/Main');
 var User 		        = require('./components/user/Main');
-var Client 		= require('./components/client/Main');
+var Client 		        = require('./components/client/Main');
 var TimeSheetDayView    = require('./components/timesheetdayview/Main');
-var Login 		= require('./components/Login/Main');
-var SignUp 		= require('./components/Signup/Main');
+var Login 		        = require('./components/Login/Main');
+var SignUp 		        = require('./components/Signup/Main');
 var Timesheetweekview   = require('./components/timesheetweekview/Main');
 var ProjectAssign       = require('./components/projectassign/Main');  
+var Report              = require('./components/report/Main');  
+
 
 var comSwitchRole  = [];
 var comSwitchRolew = [];
@@ -62,6 +64,7 @@ var App = React.createClass({
 									<NavItemLink to="user">Users</NavItemLink>
 									<NavItemLink to="client">Client</NavItemLink>
                                     <NavItemLink to="projectassign">ProjectAssign</NavItemLink>
+                                    <NavItemLink to="report">Report</NavItemLink>
 								</Nav>	
 							</div>	
 						</header>
@@ -115,9 +118,6 @@ var App = React.createClass({
   
    }
  }
-
-
-
 });
 
 var routes = (
@@ -132,6 +132,7 @@ var routes = (
     <Route name="timesheetdayview" handler={TimeSheetDayView}/>
     <Route name="timesheetweekview" handler={Timesheetweekview}/>
     <Route name="projectassign" handler={ProjectAssign}/>
+    <Route name="report" handler={Report} />
     
     <DefaultRoute handler={Dashboard}/>
     </Route>

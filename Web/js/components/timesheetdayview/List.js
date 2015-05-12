@@ -9,14 +9,16 @@ var TextInput		    =	 	require('../TextInput');
 var Modal 			    = 		ReactBootstrap.Modal;
 var ModalTrigger    =       ReactBootstrap.ModalTrigger;
 var ConfigCom       =       require('../../config/ConfigComp');
+var jwt              =    require('jwt-simple');
+
 
 var comuserId;
 var tokenValue    =   $.cookie('tokengen');
 
 if(tokenValue !== undefined){
-      var secret      =   ConfigCom.secretKey; 
-          decodedValue  =   jwt.decode(tokenValue, secret);
-          comuserId       =   decodedValue.userId;
+      var secret         =   ConfigCom.secretKey; 
+          decodedValue   =   jwt.decode(tokenValue, secret);
+          comuserId      =   decodedValue.userId;
     } 
   else{
         comuserId       =   null;

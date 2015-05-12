@@ -29,5 +29,4 @@ var AppDispatcher = assign(new Dispatcher(), {
   }
 
 });
-
 module.exports = AppDispatcher;

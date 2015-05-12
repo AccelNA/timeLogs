@@ -30,10 +30,12 @@ var projectResult = [];
 var userId;
 
 var tokenValue    =   $.cookie('tokengen');
+
 if(tokenValue !== undefined){
-      var secret      =   ConfigCom.secretKey; 
+      var secret        =   ConfigCom.secretKey; 
           decodedValue  =   jwt.decode(tokenValue, secret);
-          userId       =   decodedValue.userId;
+          userId        =   decodedValue.userId;
+          
     } 
   else{
           userId       =   null;
@@ -53,8 +55,8 @@ var TimeSheetDayViewMain	=	React.createClass({
 				client_name: 0,
 				task_name_opt: [],
 				taskt_name: 0,
-                data:'',
-                taskdata:''
+        data:'',
+        taskdata:''
                 
 			}
 		  )
