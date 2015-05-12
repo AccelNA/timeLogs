@@ -22,80 +22,32 @@ header('Content-type: application/json');
 define('SECRET_KEY', "wecanchnagethiskeyasweneed");
 define('VALIDITY_TIME', 3600);
 
-/*
- *Create token 
- */
-function createToken($data)
-{
-    /* Create a part of token using secretKey and other stuff */
-    $tokenGeneric = SECRET_KEY.$_SERVER["SERVER_NAME"]; // It can be 'stronger' of course
-
-    /* Encoding token */
-    $token = hash('sha256', $tokenGeneric.$data);
-
-    return array('token' => $token, 'userData' => $data);
-}
-
-
-/*
- * Token based authentication
- */ 
-function checkToken($receivedToken, $receivedData)
-{
-    /* Recreate the generic part of token using secretKey and other stuff */
-    $tokenGeneric = SECRET_KEY.$_SERVER["SERVER_NAME"];
-
-    // We create a token which should match
-    $token = hash('sha256', $tokenGeneric.$receivedData);   
-
-    // We check if token is ok !
-    if ($receivedToken != $token)
-      {
-        echo 'wrong Token !';
-        die('The wrong credential!');
-      }
-    
-    
-}
-
-
-/*
- * Check Token Value
- */ 
-   function checkTokenValue(){
-
-          $data   =  $_COOKIE['email']."-".$_COOKIE['role'];
-          $token  =  createToken($data);
-          checkToken($_COOKIE['token'],$token['userData']);
-
-   }
 
 /*
  * Mysql Connection
  */
 function dbconnect(){
-$servername = "localhost"; // change host here
-$username = "root"; // change user name
-$password = "";    // Change password
+
+$servername = "localhost";
+$username = "root";
+$password = "";
 
 // Create connection
  $conn = mysql_connect($servername, $username, $password);
- mysql_select_db('accel_timesheet', $conn) or die('Server Busy');   // Use your database name instaed of 'accel_timesheet'
+ mysql_select_db('accel_timesheet', $conn) or die('Server Busy');
 /*
  * Mysql connection end
  */
 }
+
+
 include 'route.php';
-
 $route = new Route();
+$route->add('/', function() {});
 
-$route->add('/', function() {
-	echo 'HOME';
-});
 
 
 // signIn process 
-
 
 $route->add('/signin/', function() {
 	
@@ -103,27 +55,20 @@ $route->add('/signin/', function() {
 	$jsonArray =  file_get_contents("php://input");;
 	$finalArray = json_decode($jsonArray, true);
    
+  $userEmail = trim($finalArray[0]['username']);
+  $userPassword = md5(trim($finalArray[0]['password']));
+  dbconnect();
     
-    
-    $userEmail = trim($finalArray[0]['username']);
-    $userPassword = md5(trim($finalArray[0]['password']));
-    dbconnect();
-    
-    $authConnection = mysql_query("
+  $authConnection = mysql_query("
     								SELECT * from user 
     								JOIN role ON user.user_role_id = role.role_id 
     								WHERE user_email='$userEmail' and user_password='$userPassword'");
    
-    $dataRow  =  mysql_fetch_row($authConnection);
+  $dataRow  =  mysql_fetch_row($authConnection);
    
-    if(count($dataRow)>1){
-
-
-
-    $data = $dataRow[1]."-".$dataRow[9];
-    $token = createToken($data);
-  
-	    $finalData = array(
+  if(count($dataRow)>1){
+  $token = null;
+  $finalData = array(
     	        'data'   => array(
         	    	'email'  => $dataRow[1],
             		'role'	 => $dataRow[9],
@@ -132,15 +77,9 @@ $route->add('/signin/', function() {
             		'message'=> 'success',
                 'token'  => $token
             	)
-   	  );
-      setcookie('token',$token['token']);
-      setcookie('userdata',$token['userData']);
-      $email = $dataRow[1];
-      $role  = $dataRow[9];
-      setcookie('email',$email);
-      setcookie('role',$role);
-   	 }
-   	else{
+  );
+}
+  else{
 		 $finalData = array(
     	        			'data' =>array(
     	        			'message' =>'fail'
@@ -156,13 +95,13 @@ $route->add('/signin/', function() {
  */ 
 $route->add('/projectlist/',function(){
 
-        checkTokenValue();
+       
         dbconnect();
         $jsonArray =  file_get_contents("php://input");;
         $finalArray = json_decode($jsonArray, true);
 
         $projectsql = mysql_query("
-                                    SELECT * , client.client_name AS  'Client Name'
+                                        SELECT * , client.client_name AS  'Client Name'
                                         FROM project
                                         LEFT JOIN client ON client_id = project_client_id
                                     "
@@ -193,7 +132,7 @@ $route->add('/projectlist/',function(){
  */ 
 $route->add('/projectdelete/',function(){
        
-        checkTokenValue();
+        
         $jsonArray =  file_get_contents("php://input");;
         $finalArray = json_decode($jsonArray, true);
         $projectId = trim($finalArray[0]['projectId']);
@@ -219,7 +158,7 @@ $route->add('/projectcreate/',function(){
 
 
         $jsonArray =  file_get_contents("php://input");
-        checkTokenValue();
+        
         $finalArray = json_decode($jsonArray, true);
        
 
@@ -259,18 +198,18 @@ $route->add('/projectedit/',function(){
 
             $jsonArray =  file_get_contents("php://input");
             $finalArray = json_decode($jsonArray, true);
-            checkTokenValue();
+            
             dbconnect();
             $prjectName  = $finalArray[0]['projectName'];
             $discription = $finalArray[0]['description'];
             $isBillable  = $finalArray[0]['is_billable'];
-            $clientName  = $finalArray[0]['client_name'];   
+            $clientId = $finalArray[0]['client_id'];   
             $projectId   = $finalArray[0]['project_Id']; 
 
             echo $projectsql = "UPDATE  project SET  project_name    =  '$prjectName',
                                                  project_description =  '$discription', 
                                                  project_is_billable =  '$isBillable',
-                                                 project_client_id   =  '$clientName'   
+                                                 project_client_id   =  '$clientId'   
                                                  WHERE  project_id   =   $projectId";
              mysql_query($projectsql);
 
@@ -287,7 +226,7 @@ $route->add('/projectedit/',function(){
 $route->add('/clientlist/',function(){
 
         dbconnect();
-        checkTokenValue();
+        
         $clientsql = mysql_query("
                                     SELECT * from client"
                                   );
@@ -297,7 +236,16 @@ $route->add('/clientlist/',function(){
              $finalData[] = array(
                     'Action'        =>   $dataRow[0],  
                     'Client Name'   =>   $dataRow[1],
-                    'clientname'   =>   $dataRow[1]
+                    'clientname'   =>   $dataRow[1],
+                    'Website'       =>   $dataRow[1],
+                    'Email'         =>   $dataRow[1],
+                    'Phone'         =>   $dataRow[1],
+                    'Fax'           =>   $dataRow[1],
+                    'Address 1'     =>   $dataRow[1],
+                    'Address 2'     =>   $dataRow[1],
+                    'City'          =>   $dataRow[1], 
+                    'State'         =>   $dataRow[1], 
+                    'Country'       =>   $dataRow[1]
             );
            
          }
@@ -314,7 +262,7 @@ $route->add('/clientlist/',function(){
 $route->add('/userlist/',function(){
 
         dbconnect();
-        checkTokenValue();
+        
         $clientsql = mysql_query("
                                     SELECT * from user"
                                   );
@@ -345,7 +293,7 @@ $route->add('/userlist/',function(){
      
       $jsonArray =  file_get_contents("php://input");
       $finalArray = json_decode($jsonArray, true);
-      checkTokenValue();
+      
 
         $firstName      = $finalArray[0]['firstName'];
         $lastName       = $finalArray[0]['lastName'];
@@ -386,7 +334,7 @@ $route->add('/userlist/',function(){
  */ 
 $route->add('/userdelete/',function(){
 
-        checkTokenValue();
+        
         $jsonArray =  file_get_contents("php://input");
         $finalArray = json_decode($jsonArray, true);
         $employeeId = trim($finalArray[0]['employeeId']);
@@ -411,7 +359,7 @@ $route->add('/userdelete/',function(){
 
 $route->add('/useredit/',function(){
 
-            checkTokenValue();
+            
             $jsonArray =  file_get_contents("php://input");
             $finalArray = json_decode($jsonArray, true);
            
@@ -440,7 +388,7 @@ $route->add('/useredit/',function(){
 $route->add('/tasklist/',function(){
 
         dbconnect();
-        checkTokenValue();
+        
         $tasksql = mysql_query("
                                     SELECT *,project.project_name as ProjectName from task LEFT JOIN project ON 
                                     project.project_id = task.task_project_id"
@@ -473,10 +421,10 @@ $route->add('/tasklist/',function(){
      
       $jsonArray =  file_get_contents("php://input");
       $finalArray = json_decode($jsonArray, true);
-      checkTokenValue();
+      
 
         $taskName     =   $finalArray[0]['taskName'];
-        $projectName  =   $finalArray[0]['projectName'];
+        $projectId  =   $finalArray[0]['projectId'];
         $note         =   $finalArray[0]['note'];
       
 
@@ -489,7 +437,7 @@ $route->add('/tasklist/',function(){
                             )
                         VALUES (
                                 '$taskName',
-                                '$projectName',
+                                '$projectId',
                                 '$note'
                             )";
 
@@ -511,7 +459,7 @@ $route->add('/taskdelete/',function(){
 
 
         $jsonArray =  file_get_contents("php://input");
-        checkTokenValue();
+        
         $finalArray = json_decode($jsonArray, true);
         $taskId = trim($finalArray[0]['taskId']);
 
@@ -536,17 +484,17 @@ $route->add('/taskedit/',function(){
 
             $jsonArray =  file_get_contents("php://input");
             $finalArray = json_decode($jsonArray, true);
-            checkTokenValue();
+            
 
             dbconnect();
             $TaskName = $finalArray[0]['TaskName'];
-            $ProjectName     = $finalArray[0]['ProjectName'];
+            $ProjectId     = $finalArray[0]['projectId'];
             $Descriptions   = $finalArray[0]['Descriptions'];
             $Action   = $finalArray[0]['Action'];
 
 
-            $tasksql = "UPDATE  task SET  task_name  =  '$TaskName',
-                                                  task_project_id            =  $ProjectName,
+           $tasksql = "UPDATE  task SET  task_name  =  '$TaskName',
+                                                  task_project_id =  $ProjectId,
                                                   task_notes  =  '$Descriptions'
                                                   WHERE  task_id   =   $Action";
             mysql_query($tasksql);
@@ -566,7 +514,7 @@ $route->add('/timelisttoday/userid/.+/currentdate/.+',function($userId,$currentd
 
       
       dbconnect();
-      checkTokenValue();
+      
       $currentDate = isset($currentdate)?$currentdate:date('Y-m-d');
       $timeSheet = mysql_query("SELECT *,
                     timesheet.timesheet_hours as Hours,task.task_name as Task,
@@ -604,7 +552,7 @@ $route->add('/timelisttoday/userid/.+/currentdate/.+',function($userId,$currentd
      
       $jsonArray =  file_get_contents("php://input");
       $finalArray = json_decode($jsonArray, true);
-      checkTokenValue();
+      
     
         $Client     =   $finalArray[0]['Client'];
         $Hours      =   $finalArray[0]['Hours'];
@@ -650,7 +598,7 @@ $route->add('/timesheetdelete/',function(){
 
         $jsonArray =  file_get_contents("php://input");;
         $finalArray = json_decode($jsonArray, true);
-        checkTokenValue();
+        
         $timeId = trim($finalArray[0]['timeId']);
 
         dbconnect();
@@ -676,7 +624,7 @@ $route->add('/timesheetdelete/',function(){
      
       $jsonArray =  file_get_contents("php://input");
       $finalArray = json_decode($jsonArray, true);
-      checkTokenValue();
+      
     
      // var_dump($finalArray);
       dbconnect();
@@ -727,7 +675,7 @@ $route->add('/timesheetdelete/',function(){
 $route->add('/projectlistautocomplete/',function(){
 
         dbconnect();
-        checkTokenValue();
+        
         $projectsql = mysql_query("
                                     SELECT * FROM project"
                                  );
@@ -753,7 +701,7 @@ $route->add('/projectlistautocomplete/',function(){
 $route->add('/userlistautocomplete/',function(){
 
         dbconnect();
-        checkTokenValue();
+        
         $usersql = mysql_query("
                                     SELECT * FROM user"
                                   );
@@ -781,7 +729,7 @@ $route->add('/userlistautocomplete/',function(){
 $route->add('/projectUserAssign/',function(){
 
         dbconnect();
-        checkTokenValue();
+        
         $jsonArray =  file_get_contents("php://input");
         $finalArray = json_decode($jsonArray, true);
         print_r($finalArray);
@@ -817,8 +765,9 @@ $route->add('/projectUserAssign/',function(){
  */ 
 $route->add('/projectlistuser/user/.+',function($user){
 
+        
+
         dbconnect();
-        checkTokenValue();
         $projectsql = mysql_query("
                                         select * from project JOIN 
                                         project_assign_user ON project_assign_user.project_id = project.project_id 
@@ -837,6 +786,121 @@ $route->add('/projectlistuser/user/.+',function($user){
           $index++;   
          }
      echo json_encode($finalData);   
+
+});
+
+/* ProjectCreate
+ * @ Return data is JSON. Return data Key should be same as given below.  
+ * @ Date 26-03-2015
+ */ 
+$route->add('/clientcreate/',function(){
+
+
+        $jsonArray =  file_get_contents("php://input");
+        
+        $finalArray = json_decode($jsonArray, true);
+        $clientName  = $finalArray[0]['ClientName'];
+       
+        dbconnect();
+        $clientsql = "INSERT INTO  client (
+                        
+                        client_name 
+                            )
+                        VALUES (
+                                '$clientName'
+                               
+                            )";
+        mysql_query($clientsql);
+        $finalData = array(
+                              'message'        =>   'success'
+                         );
+        echo json_encode($finalData);   
+
+});
+
+/*
+ * Get Members effort on each project
+ * @JSOn data.
+ * @ Date 07-05-2015
+ * @ auther Jagadeesh puthukkudi
+ */
+ 
+  $route->add('/projectreportonmember/',function(){
+
+
+        $jsonArray   =  file_get_contents("php://input");
+        
+        $finalArray  = json_decode($jsonArray, true);
+        $projectId   = $finalArray[0]['project'];
+        dbconnect();
+        if(!isset($projectId) or strcmp($projectId,'')==0){ return;}  
+
+        $projectSql = "SELECT timesheet_hours,timesheet_user_id,CONCAT(user_first_name,' ',user_last_name) AS name,
+                            SUM(timesheet_hours)  AS tottime
+                            FROM timesheet 
+                            JOIN user ON user.user_id = timesheet.timesheet_user_id
+                            WHERE timesheet_task_id
+                            IN (
+                            SELECT task_id
+                            FROM task
+                            WHERE task_project_id =$projectId)
+                             group by timesheet_user_id
+                            ";
+        $projectSqlValue = mysql_query($projectSql);
+
+        $index = 1;
+        while($dataRow = mysql_fetch_array($projectSqlValue)){
+
+             $finalData[] = array(
+                    'timesheet_user_id'   =>   $dataRow['timesheet_user_id'],
+                    'timesheet_hours'     =>   $dataRow['timesheet_hours'],
+                    'name'                =>   $dataRow['name'],
+                    'tottime'             =>   $dataRow['tottime']
+            );
+
+        $index++;   
+        }
+
+        echo json_encode($finalData); 
+
+});
+$route->add('/projectreportotask/',function(){
+
+
+        $jsonArray   =  file_get_contents("php://input");
+        
+        $finalArray  = json_decode($jsonArray, true);
+        $projectId   = $finalArray[0]['project'];
+        $firstDate   = $finalArray[0]['firstDate'];
+        $secondDate  = $finalArray[0]['secondDate'];
+
+        dbconnect();
+        
+        if(!isset($projectId) or strcmp($projectId,'')==0){ return;}  
+
+        $memberSql = "SELECT * 
+                              FROM timesheet
+                              JOIN task ON task.task_id = timesheet.timesheet_task_id
+                              JOIN project ON project.project_id = task.task_project_id
+                              JOIN user ON user.user_id = timesheet.timesheet_user_id
+                              WHERE project_id = $projectId AND 
+                              (DATE(timesheet_updated_date)>='$firstDate' AND DATE(timesheet_updated_date)<='$secondDate') 
+                            ";
+        $memberSqlValue = mysql_query($memberSql);
+
+        $index = 1;
+        while($dataRow = mysql_fetch_array($memberSqlValue)){
+
+             $finalData[] = array(
+                    'task_name'           =>   $dataRow['task_name'],
+                    'timesheet_hours'     =>   $dataRow['timesheet_hours'],
+                    'user_first_name'     =>   $dataRow['user_first_name']
+            );
+        $index++;   
+        }
+  
+
+        echo json_encode($finalData); 
 
 });
 
