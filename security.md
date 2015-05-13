@@ -34,9 +34,9 @@ These key value gets from config file and encoding function is
     var token   = jwt.encode(payload, secret);  
     
     
-is generating a token, which is stored in token variable and these value are stored temporarly in cookie.
+is generating a token, which is stored in token variable and these value are stored temporarly in **local storage**.
 
-In **_app.js_** is handling all the routing operation. As already described, In this application have two types of views are rendering.First is ADMIN and second is Employee. In **app.js** file, first accept cookie value which is named as **tokengen**. This varable contains a encrypted data. Then decode these value by 
+In **_app.js_** is handling all the routing operation. As already described, In this application have two types of views are rendering.First is ADMIN and second is Employee. In **app.js** file, first accept localstorage value which is named as **tokengen**. This varable contains a encrypted data. Then decode these value by 
 
     var decodedValue 	= 	jwt.decode(tokenValue, secret);
  Here we can decode these token value. After this decoding operation we will get role and user id. In configuration file contains 
@@ -49,7 +49,7 @@ Compare above code and decode value and findout the Role. These Role value is de
 
     var App = React.createClass({
      	render: function () { 
-           var tokenValue		= 	$.cookie('tokengen');
+                var tokenValue      = localStorage.tokengen ;
           	var comSwitchRole;
           	if(tokenValue !== undefined){
 			             var secret 	= 	ConfigCom.secretKey; 
