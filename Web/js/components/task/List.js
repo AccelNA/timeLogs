@@ -157,7 +157,8 @@ var TaskListSection	=	React.createClass({
 
 		 	  $.get(ConfigCom.serverUrl + 'tasklist', function(result) {
                  if (this.isMounted()) {
-                           this.setState({taskData:TaskStore.taskList()});
+                 	      TaskStore.init(result);
+                           this.setState({taskData:result});
                      }
                }.bind(this));
 

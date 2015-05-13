@@ -20,7 +20,9 @@ var CHANGE_EVENT = 'change';
 
 var ProjectStore	=	 assign({}, EventEmitter.prototype, {
 	
-
+init : function(initialData){
+   projects = initialData ; 
+},
 Delete:function(ProjectDetails){
 	
 	
@@ -72,7 +74,7 @@ projectList : function(){
 	 	
 	  fetchOp.projectGet(function(data){
 		 return projects = data;
-		 });
+		});
  	
 	 return projects;
 },

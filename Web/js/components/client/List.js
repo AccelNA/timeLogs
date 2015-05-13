@@ -194,8 +194,9 @@ var ListSection	=	React.createClass({
                  
             $.get(ConfigCom.serverUrl + 'clientlist', function(result) {
                  if (this.isMounted()) {
+                 	 ClientStore.init(result);
                           this.setState(
-                                 {clientData:ClientStore.clientList()}
+                                 {clientData:result}
 
                               );
                           	

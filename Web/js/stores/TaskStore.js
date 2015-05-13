@@ -19,7 +19,9 @@ var CHANGE_EVENT = 'change';
 
 var TaskStore	=	 assign({}, EventEmitter.prototype, {
 	
-
+init : function(initialData){
+   tasks = initialData ; 
+},
 create : function(taskDetails){
 		
 		var taskAllDetail = [taskDetails];

@@ -19,7 +19,9 @@ var CHANGE_EVENT = 'change';
 
 var ClientStore	=	 assign({}, EventEmitter.prototype, {
 	
-	
+init : function(initialData){
+   clients = initialData ; 
+},	
 getAllClient  :function(){
   					return clients ;   
  	      		

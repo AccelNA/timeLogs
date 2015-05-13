@@ -17,7 +17,9 @@ var CHANGE_EVENT = 'change';
 
 var UserStore	=	 assign({}, EventEmitter.prototype, {
 	
-
+init : function(initialData){
+   users = initialData ; 
+},
 create : function(userDetails){
 	
 			var userAllDetail = [userDetails];

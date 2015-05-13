@@ -189,12 +189,14 @@ var projectListSection	=	React.createClass({
                  
             $.get(ConfigCom.serverUrl + 'projectlist', function(result) {
                  if (this.isMounted()) {
+                       ProjectStore.init(result);
                           this.setState(
-                                 {projectData:ProjectStore.projectList()}
+                                 {projectData:result}
                               );
+
                      }
                }.bind(this));
-
+           
             ProjectStore.addChangeListener(this._onChange);
 
   },

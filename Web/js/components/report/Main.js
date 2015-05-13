@@ -12,27 +12,29 @@ var PieChart             =   rd3.PieChart;
 var project = [];
 var data    = [];
 var userId;
-var tokenValue      =   $.cookie('tokengen');
 
 var pieDataForMembers ={label: 'Members', value: 100};
-
 var dropdownWidth = {width: '164px'};
 
 
-if(tokenValue !== undefined){
-            var secret          =   ConfigCom.secretKey; 
-                decodedValue    =   jwt.decode(tokenValue, secret);
-                userId          =   decodedValue.userId;
-        }   
-    else{
-              userId         =   null;
-    }
+
 
 
 var Adminreport = React.createClass({
     
     getInitialState:function(){
             
+            var tokenValue    = localStorage.tokengen ;
+            if(tokenValue !== undefined){
+                  var secret    =   ConfigCom.secretKey; 
+                  decodedValue  =   jwt.decode(tokenValue, secret);
+                  userId        =   decodedValue.userId;
+               } 
+            else{
+                userId       =   null;
+              } 
+         
+
             return({
               data:'',
               project_name:'',
@@ -112,7 +114,7 @@ var Adminreport = React.createClass({
     render  :function(){
 
               //Project Name and Details fro drop down box 
-              project.push(<option >Select One</option>);
+              project.push(<option key={0} value={0}>Select One</option>);
               
               var commentNodes   =   this.state.data.map(function (com) {
                      prjtValue   =   com.projectname +"*"+ com.Action;

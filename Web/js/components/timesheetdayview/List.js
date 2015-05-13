@@ -13,22 +13,16 @@ var jwt              =    require('jwt-simple');
 
 
 var comuserId;
-var tokenValue    =   $.cookie('tokengen');
 
-if(tokenValue !== undefined){
-      var secret         =   ConfigCom.secretKey; 
-          decodedValue   =   jwt.decode(tokenValue, secret);
-          comuserId      =   decodedValue.userId;
-    } 
-  else{
-        comuserId       =   null;
-  }
+
+
+
 
 
 var Link = React.createClass({
   	
   	  getInitialState: function() {
-			
+			      
 						  return({
 						  	value : '',
 						  });				
@@ -62,16 +56,26 @@ var ListSection	=	React.createClass({
    
 
 		 getInitialState : function(){
+          
+         var tokenValue      =   localStorage.tokengen ; 
+            if(tokenValue !== undefined){
+                var secret         =   ConfigCom.secretKey; 
+                decodedValue   =   jwt.decode(tokenValue, secret);
+                comuserId      =   decodedValue.userId;
+              } 
+            else{
+                comuserId       =   null;
+              }
+
 
        return{
-			 	 timeData:TimesheetActions.timeList()
+			 	 timeData:''
         
 			 }
 		  },
 		 componentDidMount: function() {
 
-       
-          
+               
           $.get(ConfigCom.serverUrl + "timelisttoday/userid/"+comuserId+"/currentdate/"+currentdate, function(result) {
                  if (this.isMounted()) {
                             console.log(result);
@@ -85,12 +89,12 @@ var ListSection	=	React.createClass({
    				TimeStore.addChangeListener(this._onChange);
   			},
  		 componentWillMount : function(){
-         	       this.setState({timeData:TimeStore.timeList()});
+         	       //this.setState({timeData:TimeStore.timeList()});
          	       TimeStore.removeChangeListener(this._onChange); 
          	        
           },
      getTimesheet :function(){
-         this.setState({timeData:TimesheetActions.timeCustomList('2015-03-29')});
+        // this.setState({timeData:TimesheetActions.timeCustomList('2015-03-29')});
          // TimeStore.removeChangeListener(this._onChange);  
 
       },    

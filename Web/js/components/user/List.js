@@ -114,6 +114,7 @@ var ListSection	=	React.createClass({
 
 		 	 $.get(ConfigCom.serverUrl + 'userlist', function(result) {
                  if (this.isMounted()) {
+                           UserStore.init(result);
                            this.setState({userData:UserStore.userList()});
                      }
                }.bind(this));

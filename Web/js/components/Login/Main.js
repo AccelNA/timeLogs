@@ -5,7 +5,7 @@ var AuthStore 		=  require('../../stores/AuthStore');
 var TextInput     =  require('../TextInput');
 var ReactBootstrap  =    require('react-bootstrap');
 var RButton       =  require('../Button');
-
+var Icon = require('react-geomicons');
 
  var divStyle = {
            color: 'red'
@@ -69,7 +69,10 @@ React.createClass({
                           <ReactBootstrap.ListGroup>                          
                           <ReactBootstrap.ListGroupItem>
                             <form name="logiForm" method="post">
-                            <h2>Sign in to Timesheet</h2>
+                            <h2>
+                            <Icon name="lock" />
+                            Sign in to Timesheet
+                            </h2>
                              <span style={divStyle}>{this.state.errorMessage}</span>
                            
                             <div id='loginErrorMessage'></div>

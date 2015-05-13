@@ -11,24 +11,24 @@ var ModalTrigger    =       ReactBootstrap.ModalTrigger;
 var ConfigCom       =       require('../../config/ConfigComp');
 var jwt             =    require('jwt-simple');
 
-var tokenValue    =   $.cookie('tokengen');
+
 var comuserId;
-
-if(tokenValue !== undefined){
-      var secret      =   ConfigCom.secretKey; 
-          decodedValue  =   jwt.decode(tokenValue, secret);
-          comuserId       =   decodedValue.userId;
-    } 
-  else{
-        comuserId       =   null;
-  }
-
 
 
 var Link = React.createClass({
   	
   	  getInitialState: function() {
-			
+			        var tokenValue      = localStorage.tokengen ;
+              if(tokenValue !== undefined){
+                  var secret      =   ConfigCom.secretKey; 
+                      decodedValue  =   jwt.decode(tokenValue, secret);
+                      comuserId       =   decodedValue.userId;
+                 } 
+              else{
+                 comuserId       =   null;
+              }
+
+
 						  return({
 						  	value : '',
 						  });				

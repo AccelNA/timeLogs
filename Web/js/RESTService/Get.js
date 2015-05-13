@@ -4,8 +4,14 @@ var jwt                 =       require('jwt-simple');
 
 
 var secret = ConfigCom.secretKey; 
-
-
+var tokenValue    = localStorage.tokengen ;
+var autherization;
+if(tokenValue !== undefined){
+             autherization = tokenValue
+        }   
+    else{
+              autherization         =   null;
+    }
 /* Authentication 
  * JSON data
  * REST API
@@ -27,6 +33,7 @@ var GETDATA = {
                      data    : JSON.stringify(pluginArrayAuth),
                      dataType: "json",
                      type    : "POST",
+                     crossDomain: true,
                      success: function(data) {
                                
                                     finalMessage    =  data.data.message;
@@ -41,8 +48,11 @@ var GETDATA = {
                                     else{ 
 
                                             var payload = {role: roleVal,userId:userVal};
-                                            var token   = jwt.encode(payload, secret);  
-                                            $.cookie('tokengen',token);
+                                            var token   = jwt.encode(payload, secret); 
+
+                                           // $.cookie('tokengen',token);
+                                           localStorage.tokengen = token;
+
                                             var redirectUrl = ConfigCom.clientBaseUrl+'dashboard';
                                             window.location = redirectUrl;
 
@@ -65,6 +75,7 @@ var GETDATA = {
                 url : ConfigCom.serverUrl + 'projectlist',
                 dataType : "jsonp",
                 type : "GET",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
         });
@@ -91,6 +102,7 @@ projectDelete : function(projectId,callback){
                 dataType : "jsonp",
                 data    : JSON.stringify(pluginArrayProject),
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
          });
@@ -120,6 +132,7 @@ projectDelete : function(projectId,callback){
                 dataType : "jsonp",
                 data    : JSON.stringify(pluginArrayProject),
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
          });
@@ -153,6 +166,7 @@ projectEdit : function(projectDetails,callback){
                 dataType : "jsonp",
                 data    : JSON.stringify(pluginArrayProject),
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
          });
@@ -171,6 +185,7 @@ projectEdit : function(projectDetails,callback){
                 url : ConfigCom.serverUrl + 'userlist',
                 dataType : "jsonp",
                 type : "GET",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
         });
@@ -200,6 +215,7 @@ projectEdit : function(projectDetails,callback){
                 dataType : "jsonp",
                 data    : JSON.stringify(pluginArrayEmployee),
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
          });
@@ -226,6 +242,7 @@ userDelete  :function(employeeId,callback){
                 dataType : "jsonp",
                 data    : JSON.stringify(pluginArrayUser),
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
          });
@@ -252,8 +269,8 @@ employeeEdit : function(userDetails){
                 url : ConfigCom.serverUrl + 'useredit',
                 dataType : "jsonp",
                 data    : JSON.stringify(pluginArrayUser),
-                type : "POST"
-                
+                type : "POST",
+                headers: {"Authorization": "Bearer " + autherization}
 
          });
 },
@@ -270,6 +287,7 @@ employeeEdit : function(userDetails){
                 url : ConfigCom.serverUrl + 'tasklist',
                 dataType : "jsonp",
                 type : "GET",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
         });
@@ -297,6 +315,7 @@ employeeEdit : function(userDetails){
                 dataType : "jsonp",
                 data    : JSON.stringify(pluginArrayTask),
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
          });
@@ -324,6 +343,7 @@ taskDelete  :function(taskId,callback){
                 dataType : "jsonp",
                 data    : JSON.stringify(pluginArrayTask),
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
          });
@@ -355,6 +375,7 @@ taskEditAjax: function(taskDetails,callback){
                 dataType : "jsonp",
                 data    : JSON.stringify(pluginArrayTask),
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
          });
@@ -373,6 +394,7 @@ todayTimesheetGet : function(userId,currentdate,callback){
                 url : ConfigCom.serverUrl + "timelisttoday/userid/"+userId+"/currentdate/"+currentdate,
                 dataType : "jsonp",
                 type : "GET",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
         });
@@ -402,6 +424,7 @@ todayTimesheetGet : function(userId,currentdate,callback){
                 dataType : "jsonp",
                 data    : JSON.stringify(pluginArrayTimesheet),
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
          });
@@ -428,6 +451,7 @@ timeDelete  :function(timeId,callback){
                 dataType : "jsonp",
                 data    : JSON.stringify(pluginArrayTime),
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
          });
@@ -448,6 +472,7 @@ timeDelete  :function(timeId,callback){
                 dataType : "jsonp",
                 data     : timeDetails,
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
          });
@@ -467,6 +492,7 @@ timeDelete  :function(timeId,callback){
                 dataType : "jsonp",
                 data     : JSON.stringify(userDetails),
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
 
          });
@@ -492,8 +518,8 @@ timeDelete  :function(timeId,callback){
                 dataType : "jsonp",
                 data    : JSON.stringify(pluginArrayClient),
                 type : "POST",
+                headers: {"Authorization": "Bearer " + autherization},
                 success : callback
-
          });
  },
 
@@ -509,6 +535,7 @@ clientGet : function(callback){
                 url : ConfigCom.serverUrl + 'clientlist',
                 dataType : "jsonp",
                 type : "GET",
+                 headers: {"Authorization": "Bearer " + autherization},
                 success : callback
           });
  },
@@ -533,6 +560,7 @@ clientGet : function(callback){
                         dataType : "json",
                         data    : JSON.stringify(pluginArrayProject),
                         type : "POST",
+                        headers: {"Authorization": "Bearer " + autherization},
                         success : function(responsereportMemberDetails){
                                 callback(responsereportMemberDetails);
                            

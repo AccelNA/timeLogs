@@ -16,23 +16,28 @@ var ConfigCom			    =	 require('../config/ConfigComp');
 var timesheets=[];
 var CHANGE_EVENT    = 'change';
 
-var tokenValue		= 	$.cookie('tokengen');
+
 var secret ; 
 var decodedValue;
 var comuserId;
 
 
-if(tokenValue !== undefined){
-			var secret 			= 	ConfigCom.secretKey; 
-			    decodedValue 	= 	jwt.decode(tokenValue, secret);
-			    comuserId 	    = 	decodedValue.userId;
-		}	
-	else{
-			  comuserId 	    = 	null;
-	}
 
 
 var TimesheetDayStore	=	 assign({}, EventEmitter.prototype, {
+
+  tokengenFn  :function(){
+ 		 var tokenValue  = localStorage.tokengen ;
+  			if(tokenValue !== undefined){
+					var secret 			= 	ConfigCom.secretKey; 
+				    decodedValue 	= 	jwt.decode(tokenValue, secret);
+			    	return comuserId 	    = 	decodedValue.userId;
+				}	
+			else{
+			  		return comuserId 	    = 	null;
+				}
+
+ 		},	 
 
 create : function(timeDetails){
 			
@@ -86,7 +91,9 @@ create : function(timeDetails){
 timeList : function(comuserId,currentdate){
 
 	  currentdate =   $.cookie('currentdate');
-			
+
+	  comuserId =this.tokengenFn();	
+
 	  fetchOp.todayTimesheetGet(comuserId,currentdate,function(data){
 		 return timesheets = data;
 		 });
@@ -94,6 +101,8 @@ timeList : function(comuserId,currentdate){
 	 return timesheets;
 	 },
 timeCustomList : function(currentdate){
+
+	comuserId =this.tokengenFn();	
 
 	fetchOp.todayTimesheetGet(comuserId,currentdate,function(data){
 		 return timesheets = data;

@@ -35,7 +35,8 @@ var App = React.createClass({
 
 	render: function () { 
 
-	var tokenValue		= 	$.cookie('tokengen');
+	//var tokenValue		= 	$.cookie('tokengen');
+	 var tokenValue		= localStorage.tokengen ;
 			
 	var comSwitchRole;
 

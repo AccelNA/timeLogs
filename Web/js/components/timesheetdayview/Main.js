@@ -29,23 +29,22 @@ var workDetails   = [];
 var projectResult = [];
 var userId;
 
-var tokenValue    =   $.cookie('tokengen');
-
-if(tokenValue !== undefined){
-      var secret        =   ConfigCom.secretKey; 
-          decodedValue  =   jwt.decode(tokenValue, secret);
-          userId        =   decodedValue.userId;
-          
-    } 
-  else{
-          userId       =   null;
-  }
-
-
 
 var TimeSheetDayViewMain	=	React.createClass({
-	  
+
+  
 	  getInitialState:function(){
+            
+            var tokenValue    = localStorage.tokengen ;
+            if(tokenValue !== undefined){
+                  var secret    =   ConfigCom.secretKey; 
+                  decodedValue  =   jwt.decode(tokenValue, secret);
+                  userId        =   decodedValue.userId;
+               } 
+            else{
+                userId       =   null;
+              } 
+
 	  	  return(
 		  	{
 				value:'',
