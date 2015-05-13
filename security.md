@@ -34,7 +34,7 @@ These key value gets from config file and encoding function is
     var token   = jwt.encode(payload, secret);  
     
     
-is generating a token, which is stored in token variable and these value are stored temporarly in **local storage**.
+is generating a token, which is stored in token variable and these value are stored temporarly in **local storage**. The code is as shown below.
 
     var payload = {role: roleVal,userId:userVal};
     var token   = jwt.encode(payload, secret); 
