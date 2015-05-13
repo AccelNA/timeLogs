@@ -129,6 +129,8 @@ Next step is to run entire application. For this purpose you can follow thse ste
 
 **Step 2** : Then Navigate to [folder here](https://github.com/AccelNA/timeLogs/tree/master/Web).
 
+**Step 3** : Then type command 'npm install'. This will install essential node modules in node_module folder. If any node packages are missing just copy all node folder from [here](https://github.com/AccelNA/timeLogs/tree/master/Web/node_modules)  and paste into your node_module folder.
+
 **Step 3** : Then type command 'npm start'.
 
 **Step 4** : Navigate to [this folder location](https://github.com/AccelNA/timeLogs/blob/master/Web/index.html). Then click and run this file in your browser.
