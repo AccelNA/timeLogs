@@ -42,7 +42,9 @@ The security details of this application can find [here](https://github.com/Acce
 * For Employee: Insert/Delete timesheet for a day.
 * For Employee: Inset/Delete tomesheet for a week 
 * TimeLogs Report
+
 ##Screenshots
+
 * Home Page
 ![Home Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsLogin.png)<br/>
 <hr/>
