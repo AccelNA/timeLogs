@@ -36,6 +36,10 @@ These key value gets from config file and encoding function is
     
 is generating a token, which is stored in token variable and these value are stored temporarly in **local storage**.
 
+    var payload = {role: roleVal,userId:userVal};
+    var token   = jwt.encode(payload, secret); 
+    localStorage.tokengen = token;
+
 In **_app.js_** is handling all the routing operation. As already described, In this application have two types of views are rendering.First is ADMIN and second is Employee. In **app.js** file, first accept localstorage value which is named as **tokengen**. This varable contains a encrypted data. Then decode these value by 
 
     var decodedValue 	= 	jwt.decode(tokenValue, secret);
