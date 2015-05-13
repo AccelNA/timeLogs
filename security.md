@@ -53,7 +53,7 @@ Compare above code and decode value and findout the Role. These Role value is de
 
     var App = React.createClass({
      	render: function () { 
-                var tokenValue      = localStorage.tokengen ;
+              var tokenValue      = localStorage.tokengen ;
           	var comSwitchRole;
           	if(tokenValue !== undefined){
 			             var secret 	= 	ConfigCom.secretKey; 
