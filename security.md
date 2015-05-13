@@ -74,3 +74,8 @@ The next step we need to use user id or role in different part of this applicati
 
     jwt.encode(payload, secret, 'HS512');
     
+In each API call these encoded value will be sent through header. In ajax call we are using parameter 
+
+     headers: {"Authorization": "Bearer " + tokenValue}
+![Autherization](https://github.com/AccelNA/aws-coe/blob/master/contents/images/autherization-timelogs.png)<br/>
+<hr/>     
