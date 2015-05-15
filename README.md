@@ -41,8 +41,10 @@ The security details of this application can find [here](https://github.com/Acce
 * For Admin: Assign Employee to task.
 * For Employee: Insert/Delete timesheet for a day.
 * For Employee: Inset/Delete tomesheet for a week 
+* TimeLogs Report
 
 ##Screenshots
+
 * Home Page
 ![Home Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsLogin.png)<br/>
 <hr/>
@@ -103,6 +105,13 @@ In this page, you can enter time for each corresponding to task.
 ![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/timeLogsMultiEntry.png)<br/>
 <hr/>
 
+
+* Report
+
+The entire time logs report is showing in this page
+
+![Project List Page](https://github.com/AccelNA/aws-coe/blob/master/contents/images/ReportPageAdmin.png)<br/>
+<hr/>
 
 ##<a name="Build"></a>How to build
 
