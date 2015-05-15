@@ -69,7 +69,7 @@ $route->add('/signin/', function() {
   if(count($dataRow)>1){
   $token = null;
   $finalData = array(
-    	        'data'   => array(
+    	          'data'   => array(
         	    	'email'  => $dataRow[1],
             		'role'	 => $dataRow[9],
             		'token'  => $dataRow[4],
@@ -903,6 +903,43 @@ $route->add('/projectreportotask/',function(){
         echo json_encode($finalData); 
 
 });
+
+
+
+/* userUpdate
+ * @ Return data is JSON. Return data Key should be same as given below.  
+ * @ Date 15-05-2015
+ */ 
+$route->add('/userupdate/',function(){
+
+
+        $jsonArray  =  file_get_contents("php://input");
+        
+        $finalArray = json_decode($jsonArray, true);
+       
+
+        $userEmail     =  $finalArray[0]['username'];
+        $userPassword  = md5($finalArray[0]['password']);
+        $token         =  $finalArray[0]['token'];
+       
+
+        dbconnect();
+        $projectsql = "UPDATE  
+                       user SET  
+                       user_auth_token =  '$token' 
+                       WHERE user_email='$userEmail' and user_password='$userPassword'";
+
+        mysql_query($projectsql);
+        $finalData = array(
+                              'message'        =>   'success'
+                         );
+        echo json_encode($finalData);   
+
+});
+
+
+
+
 
 $route->add('/name/.+', function($name) {
 	echo jason_encode("Name $name");
