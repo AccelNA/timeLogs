@@ -78,8 +78,9 @@ var ListSection	=	React.createClass({
                
           $.get(ConfigCom.serverUrl + "timelisttoday/userid/"+comuserId+"/currentdate/"+currentdate, function(result) {
                  if (this.isMounted()) {
-                            console.log(result);
+                            
                             this.setState({timeData:result});
+                            TimeStore.init(result);
                            // console.log(TimeStore.timeList(comuserId,currentdate));
                           //  this.setState({timeData:TimeStore.timeList(comuserId,currentdate)});
                      }

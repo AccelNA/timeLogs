@@ -26,7 +26,10 @@ var comuserId;
 
 var TimesheetDayStore	=	 assign({}, EventEmitter.prototype, {
 
-  tokengenFn  :function(){
+ init :function(timedata){
+     timesheets = timedata;
+ },
+ tokengenFn  :function(){
  		 var tokenValue  = localStorage.tokengen ;
   			if(tokenValue !== undefined){
 					var secret 			= 	ConfigCom.secretKey; 

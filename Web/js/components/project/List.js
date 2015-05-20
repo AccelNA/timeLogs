@@ -23,7 +23,8 @@ var clientdata =[];
       client_name_opt: [],
       client_name: 0,
       is_billable: 'No',
-      checked: false
+      checked: false,
+      clientdata:''
       
     });
   },
@@ -51,7 +52,7 @@ var clientdata =[];
         default:
     }
   },
-  componentWillMount : function(){
+  componentDidMount : function(){
     
           /*Client List */
             $.ajax({
@@ -181,13 +182,13 @@ var projectListSection	=	React.createClass({
 			       }
 		  },
      componentWillMount : function(){
-         	         this.setState({projectData:ProjectStore.projectList()});
+         	         
                    ProjectStore.removeChangeListener(this._onChange);
           	         	
 			},
      componentDidMount: function() {
                  
-            $.get(ConfigCom.serverUrl + 'projectlist', function(result) {
+            $.get(ConfigCom.serverUrl + 'projectlist',function(result) {
                  if (this.isMounted()) {
                        ProjectStore.init(result);
                           this.setState(

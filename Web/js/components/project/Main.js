@@ -10,7 +10,7 @@ var ReactPropTypes = React.PropTypes;
 var divStyle = { color: 'red'};   
 var mandetoryStyle = {color : 'red'};  
 var client = [];
-var clientdata =[];
+//var clientdata =[];
 	
 var ProjectMain = React.createClass({
 	
@@ -21,7 +21,8 @@ var ProjectMain = React.createClass({
 			client_name: 0,
 			is_billable: 'No',
 			checked: false,
-			data :''
+			data :'',
+			clientdata:[]
 			
 		});
 	},
@@ -72,7 +73,7 @@ var ProjectMain = React.createClass({
 
 	    
 	},
-	componentWillMount : function(){
+	componentDidMount : function(){
 		
              /*Client List */
             $.ajax({
@@ -86,7 +87,7 @@ var ProjectMain = React.createClass({
                                  console.error(this.props.url, status, err.toString());
                         }.bind(this)
                   }); 
-           this.setState({clientdata: clientdata});
+          // this.setState({clientdata: clientdata});
 			
 
 	},

@@ -21,6 +21,7 @@ var TaskStore	=	 assign({}, EventEmitter.prototype, {
 	
 init : function(initialData){
    tasks = initialData ; 
+   console.log(tasks);
 },
 create : function(taskDetails){
 		

@@ -919,7 +919,7 @@ $route->add('/userupdate/',function(){
        
 
         $userEmail     =  $finalArray[0]['username'];
-        $userPassword  = md5($finalArray[0]['password']);
+        $userPassword  =  md5($finalArray[0]['password']);
         $token         =  $finalArray[0]['token'];
        
 

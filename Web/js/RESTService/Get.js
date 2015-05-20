@@ -3,6 +3,8 @@ var ConfigCom			=	 	require('../config/ConfigComp');
 var jwt                 =       require('jwt-simple');
 
 
+var autherization= null;
+
 var secret = ConfigCom.secretKey; 
 
 /* Authentication 
